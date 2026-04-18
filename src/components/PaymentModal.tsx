@@ -27,7 +27,7 @@ export default function PaymentModal() {
       <div className="bg-white rounded-3xl p-0 max-w-sm w-full shadow-2xl overflow-hidden flex flex-col animate-in slide-in-from-bottom-8 duration-300">
         <div className="bg-primary-green p-6 text-white text-center relative">
            <h3 className="font-heading font-bold opacity-80">Test Environment</h3>
-           <p className="font-mono text-4xl font-bold mt-2 text-energy-gold">{activeGamePayment.price || '₹250'}</p>
+           <p className="font-mono text-4xl font-bold mt-2 text-energy-gold">₹{activeGamePayment.price || '250'}</p>
         </div>
         
         <div className="p-8 space-y-6">

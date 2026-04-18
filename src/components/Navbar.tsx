@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAppStore } from '../store/useAppStore';
 
 export default function Navbar() {
-  const { isAuthenticated, user, openAuthModal, logout } = useAppStore();
+  const { isAuthenticated, openAuthModal, logout } = useAppStore();
   const navigate = useNavigate();
 
   return (

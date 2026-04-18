@@ -1,18 +1,24 @@
 import { create } from 'zustand';
 
+export interface GamePayment {
+  id?: string | number;
+  title?: string;
+  price?: string | number;
+}
+
 interface AppState {
   isAuthenticated: boolean;
   user: { name: string; phone: string; balance: number } | null;
   authModalOpen: boolean;
   paymentModalOpen: boolean;
-  activeGamePayment: any | null;
+  activeGamePayment: GamePayment | null;
   
   openAuthModal: () => void;
   closeAuthModal: () => void;
   login: (phone: string, name: string) => void;
   logout: () => void;
   
-  openPaymentModal: (game: any) => void;
+  openPaymentModal: (game: GamePayment) => void;
   closePaymentModal: () => void;
   processPayment: () => Promise<void>;
 }
