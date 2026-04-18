@@ -1,20 +1,20 @@
 // src/components/HowItWorks.tsx
 import React from 'react';
-import { FaRegCalendarAlt, FaRegUser, FaRegCheckCircle } from 'react-icons/fa';
+import { Calendar, User, CheckCircle } from 'lucide-react';
 
 const steps = [
   {
-    icon: <FaRegCalendarAlt className="text-4xl text-brand-primary" />, // choose date
+    icon: <Calendar className="w-10 h-10 text-brand-primary" />, // choose date
     title: "Find a Game",
     description: "Browse our game catalog and pick the sport, location, and time that fits you.",
   },
   {
-    icon: <FaRegUser className="text-4xl text-brand-primary" />, // book slot
+    icon: <User className="w-10 h-10 text-brand-primary" />, // book slot
     title: "Book & Pay",
     description: "Reserve your slot and complete a secure Razorpay payment in seconds.",
   },
   {
-    icon: <FaRegCheckCircle className="text-4xl text-brand-primary" />, // get highlights
+    icon: <CheckCircle className="w-10 h-10 text-brand-primary" />, // get highlights
     title: "Get Highlights",
     description: "After the match, download your personalized highlight reel instantly.",
   },

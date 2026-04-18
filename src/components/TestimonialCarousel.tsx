@@ -1,9 +1,13 @@
 // src/components/TestimonialCarousel.tsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+
+// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/autoplay';
-import { Autoplay, Pagination } from 'swiper';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import { testimonials } from '../data/testimonials';
 
 export default function TestimonialCarousel() {

@@ -1,7 +1,7 @@
 // src/components/BlogCard.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BlogPost } from '../data/blogPosts';
+import type { BlogPost } from '../data/blogPosts';
 
 interface Props {
   post: BlogPost;

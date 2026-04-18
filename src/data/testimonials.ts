@@ -20,23 +20,3 @@ export const testimonials = [
   },
 ];
 
-export const testimonials = [
-  {
-    id: 1,
-    name: "Aarav Singh",
-    avatar: "/assets/placeholder/avatar1.png",
-    quote: "KhelClan made it so easy to find matches and get my highlights instantly!",
-  },
-  {
-    id: 2,
-    name: "Meera Patel",
-    avatar: "/assets/placeholder/avatar2.png",
-    quote: "The booking flow is seamless and the UI feels premium.",
-  },
-  {
-    id: 3,
-    name: "Rohit Kumar",
-    avatar: "/assets/placeholder/avatar3.png",
-    quote: "Love the clip delivery – I can share my best moments on socials instantly.",
-  },
-];

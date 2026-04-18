@@ -7,6 +7,10 @@ import Home from './pages/Home';
 import GamesList from './pages/GamesList';
 import GameDetails from './pages/GameDetails';
 import About from './pages/About';
+import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
+import FAQ from './pages/FAQ';
+import Contact from './pages/Contact';
 
 import Overview from './pages/Dashboard/Overview';
 import Clips from './pages/Dashboard/Clips';
@@ -27,6 +31,10 @@ function App() {
           <Route path="/games" element={<GamesList />} />
           <Route path="/games/:id" element={<GameDetails />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
 
         <Route element={<DashboardLayout />}>

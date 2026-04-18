@@ -1,7 +1,7 @@
 // src/components/GameCard.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GamePayment } from '../store/useAppStore'; // type for game
+import type { GamePayment } from '../store/useAppStore'; // type for game
 
 interface Props {
   game: GamePayment;
