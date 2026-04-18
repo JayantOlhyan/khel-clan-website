@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PublicLayout from './layouts/PublicLayout';
 import DashboardLayout from './layouts/DashboardLayout';
+import AdminLayout from './layouts/AdminLayout';
 
 import Home from './pages/Home';
 import GamesList from './pages/GamesList';
@@ -12,11 +13,17 @@ import BlogDetail from './pages/BlogDetail';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 
+// Admin Pages
+import AdminDashboard from './pages/Admin/Dashboard';
+import CultureManager from './pages/Admin/CultureManager';
+import ContentEditor from './pages/Admin/ContentEditor';
+
 import Overview from './pages/Dashboard/Overview';
 import Clips from './pages/Dashboard/Clips';
 
 import AuthModal from './components/AuthModal';
 import PaymentModal from './components/PaymentModal';
+import AIAssistant from './components/AIAssistant';
 
 function App() {
   return (
@@ -24,6 +31,7 @@ function App() {
       {/* Global Modals overlaying everything */}
       <AuthModal />
       <PaymentModal />
+      <AIAssistant />
       
       <Routes>
         <Route element={<PublicLayout />}>
@@ -40,6 +48,13 @@ function App() {
         <Route element={<DashboardLayout />}>
           <Route path="/dashboard" element={<Overview />} />
           <Route path="/dashboard/clips" element={<Clips />} />
+        </Route>
+
+        <Route element={<AdminLayout />}>
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/culture" element={<CultureManager />} />
+          <Route path="/admin/content" element={<ContentEditor />} />
         </Route>
       </Routes>
     </BrowserRouter>

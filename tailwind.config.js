@@ -7,10 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        // New brand palette (dark blue, teal, gold accent)
-        "brand-primary": "#0d3b66",
-        "brand-secondary": "#faf0ca",
-        "brand-accent": "#f4d35e",
+        // New TurfHub-inspired palette (Forest Green, Lime, Neutral)
+        "brand-forest": "#1b3a2b",
+        "brand-lime": "#c8f902",
+        "brand-neutral": "#f8f9f8",
+        "brand-primary": "#1b3a2b", // Alias for backward compatibility if needed
+        "brand-secondary": "#c8f902",
+        "brand-accent": "#c8f902",
         // Existing KhelClan tokens kept as fallback
         primary: { green: "#1D6A36" },
         energy: { gold: "#D4860A" },

@@ -1,0 +1,36 @@
+{
+  "company": {
+    "name": "KhelClan",
+    "mission": "Empowering athletes through innovation and convenience.",
+    "tagline": "Play. Compete. Capture.",
+    "founded": "2024",
+    "location": "Gurugram, India"
+  },
+  "culture": [
+    "Community First: Everything we do is to bring people together.",
+    "Innovation: We automate the highlight-capturing experience using AI-driven cameras.",
+    "Accessibility: Our goal is to make premium sports venues available to every amateur athlete.",
+    "Passion for Sport: The team behind KhelClan consists of actual athletes who play the games they host."
+  ],
+  "rules": [
+    "Players must arrive at least 15 minutes before their booked slot.",
+    "Cancellation is allowed up to 2 hours before the start time for a 90% refund.",
+    "Appropriate sports shoes (turf shoes or studs for football) are required.",
+    "Usage of plastic whistles or loud airhorns is prohibited to respect neighboring residents."
+  ],
+  "faq": [
+    {
+      "q": "How do I get my highlights?",
+      "a": "Highlights are automatically processed and delivered to your KhelClan dashboard within 30 minutes of the game's end."
+    },
+    {
+      "q": "Can I invite my friends?",
+      "a": "Yes! You can share your booking link with friends so they can join the slot directly or see the game details."
+    }
+  ],
+  "contacts": {
+    "email": "hello@khelclan.com",
+    "phone": "+91 96673 44125",
+    "support": "24/7 via WhatsApp and Email"
+  }
+}

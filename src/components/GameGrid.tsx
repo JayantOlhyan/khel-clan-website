@@ -5,10 +5,17 @@ import GameCard from './GameCard';
 
 export default function GameGrid() {
   return (
-    <section className="py-12 bg-muted-green" id="games-grid">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-heading text-deep-black mb-8 text-center animate-fadeIn">Featured Games</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <section className="py-24 bg-brand-neutral" id="games-grid">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 space-y-4 md:space-y-0 text-center md:text-left">
+          <div className="space-y-2">
+            <span className="text-brand-forest font-bold text-xs uppercase tracking-widest bg-brand-lime/20 px-3 py-1 rounded-full">Available Now</span>
+            <h2 className="text-4xl md:text-5xl font-heading font-black text-brand-forest">Featured Games</h2>
+          </div>
+          <p className="text-gray-500 max-w-md">Discover top-rated sports venues and join competitive games in your city.</p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {games.map((game) => (
             <GameCard key={game.id} game={game} />
           ))}
