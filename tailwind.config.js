@@ -7,25 +7,40 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          green: "#1D6A36",
-        },
-        energy: {
-          gold: "#D4860A",
-        },
-        deep: {
-          black: "#1A1A1A",
-        },
-        muted: {
-          green: "#F2F7F4",
-        }
+        // New brand palette (dark blue, teal, gold accent)
+        "brand-primary": "#0d3b66",
+        "brand-secondary": "#faf0ca",
+        "brand-accent": "#f4d35e",
+        // Existing KhelClan tokens kept as fallback
+        primary: { green: "#1D6A36" },
+        energy: { gold: "#D4860A" },
+        deep: { black: "#1A1A1A" },
+        muted: { green: "#F2F7F4" },
       },
       fontFamily: {
-        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      }
+        heading: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      spacing: {
+        9: "2.25rem",
+        13: "3.25rem",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 0.6s ease-out forwards",
+        slideUp: "slideUp 0.6s ease-out forwards",
+      },
     },
   },
   plugins: [],
-}
+};
