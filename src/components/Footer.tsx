@@ -58,9 +58,9 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
-            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">Join the Newsletter</h4>
-            <p className="text-white/40 font-body mb-6 text-xs">Get notified about new game slots and exclusive rewards.</p>
-            <NewsletterForm />
+            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">WhatsApp Updates</h4>
+            <p className="text-white/40 font-body mb-6 text-xs">Get instant alerts about new slots and game highlights via WhatsApp.</p>
+            <NewsletterForm variant="compact" />
           </div>
         </div>
 

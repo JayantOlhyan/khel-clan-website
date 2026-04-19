@@ -16,8 +16,10 @@ export default function GameGrid() {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {games.map((game) => (
-            <GameCard key={game.id} game={game} />
+          {games.map((game, idx) => (
+            <div key={game.id} className="animate-fadeIn" style={{ animationDelay: `${idx * 150}ms`, animationFillMode: 'both' }}>
+              <GameCard game={game} />
+            </div>
           ))}
         </div>
       </div>

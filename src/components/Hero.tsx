@@ -60,7 +60,7 @@ export default function Hero() {
             #1 Sports Community in India
           </span>
           <h1 className="text-5xl md:text-7xl font-heading font-black leading-tight animate-fadeIn animation-delay-100">
-            Choose Your Turf.<br/>
+            Claim Your Pitch.<br/>
             <span className="text-brand-lime underline decoration-wavy underline-offset-8">Play Your Game.</span>
           </h1>
           <p className="text-lg md:text-xl text-white/60 font-body max-w-lg mx-auto lg:mx-0 animate-fadeIn animation-delay-200">

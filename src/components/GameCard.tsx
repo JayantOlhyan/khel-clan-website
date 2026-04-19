@@ -10,7 +10,7 @@ interface Props {
 
 export default function GameCard({ game }: Props) {
   return (
-    <div className="bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all group animate-fadeIn">
+    <div className="bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
       {/* Image Area */}
       <div className="relative h-48 overflow-hidden">
         <img 

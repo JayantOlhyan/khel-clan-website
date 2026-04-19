@@ -12,9 +12,9 @@ import { testimonials } from '../data/testimonials';
 
 export default function TestimonialCarousel() {
   return (
-    <section className="py-12 bg-muted-green" id="testimonials">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-heading text-deep-black mb-8 text-center animate-fadeIn">What Players Say</h2>
+    <section className="py-24 bg-muted-green" id="testimonials">
+      <div className="max-w-5xl mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-heading font-black text-deep-black mb-16 text-center animate-fadeIn">Voices of the Community</h2>
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={30}

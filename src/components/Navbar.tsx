@@ -7,20 +7,23 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   return (
-    <nav className="w-full bg-deep-black text-muted-green p-4 sticky top-0 z-40 shadow-md">
+    <nav className="w-full bg-brand-forest/90 backdrop-blur-md text-white px-6 py-4 sticky top-0 z-50 border-b border-white/5">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link to="/" className="text-2xl font-heading font-extrabold text-primary-green tracking-tight">Khel<span className="text-white">Clan</span></Link>
-        <div className="space-x-4 flex items-center font-body text-sm font-medium">
-          <Link to="/games" className="hover:text-energy-gold transition-colors hidden md:block mr-4">Find a Game</Link>
-          <Link to="/about" className="hover:text-energy-gold transition-colors hidden md:block mr-4">About Us</Link>
+        <Link to="/" className="text-3xl font-heading font-black tracking-tighter text-brand-lime">
+          KHEL<span className="text-white">CLAN</span>
+        </Link>
+        <div className="space-x-8 flex items-center font-heading font-black uppercase tracking-widest text-[10px]">
+          <Link to="/games" className="hover:text-brand-lime transition-all hidden md:block">Browse Games</Link>
+          <Link to="/about" className="hover:text-brand-lime transition-all hidden md:block">The Clan</Link>
+          <Link to="/contact" className="hover:text-brand-lime transition-all hidden md:block">Support</Link>
           
           {isAuthenticated ? (
-            <>
-              <Link to="/dashboard" className="bg-primary-green text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Dashboard</Link>
-              <button onClick={() => { logout(); navigate('/'); }} className="text-white/60 hover:text-white transition hidden sm:block">Logout</button>
-            </>
+            <div className="flex items-center space-x-6">
+              <Link to="/dashboard" className="bg-brand-lime text-brand-forest px-4 py-2 rounded-xl hover:shadow-[0_0_20px_rgba(200,249,2,0.3)] transition-all">Dashboard</Link>
+              <button onClick={() => { logout(); navigate('/'); }} className="text-white/40 hover:text-white transition-opacity hidden sm:block">Logout</button>
+            </div>
           ) : (
-            <button onClick={openAuthModal} className="bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors">Login / Join</button>
+            <button onClick={openAuthModal} className="bg-white/10 hover:bg-white/20 px-5 py-2 rounded-xl transition-all border border-white/10">LOGIN / JOIN</button>
           )}
         </div>
       </div>

@@ -7,10 +7,10 @@ import FAQItem from './FAQItem';
 export default function FAQPreview() {
   const topFaqs = faqs.slice(0, 3);
   return (
-    <section className="py-20 bg-white" id="faq-preview">
+    <section className="py-24 bg-white" id="faq-preview">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading font-black text-deep-black mb-12 text-center animate-fadeIn">
-          Common Questions
+        <h2 className="text-4xl md:text-5xl font-heading font-black text-brand-forest mb-16 text-center animate-fadeIn">
+          Frequently Asked Questions
         </h2>
         <div className="space-y-2 mb-12 animate-slideUp">
           {topFaqs.map((faq) => (

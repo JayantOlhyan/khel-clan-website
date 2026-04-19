@@ -2,44 +2,69 @@
 import React, { useState } from 'react';
 import { useAppStore } from '../store/useAppStore';
 
-export default function NewsletterForm() {
-  const [email, setEmail] = useState('');
+interface Props {
+  variant?: 'section' | 'compact';
+}
+
+export default function NewsletterForm({ variant = 'section' }: Props) {
+  const [phone, setPhone] = useState('');
   const subscribeNewsletter = useAppStore(state => state.subscribeNewsletter);
   const subscribed = useAppStore(state => state.newsletterSubscribed);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      subscribeNewsletter(email);
-      setEmail('');
+    if (phone) {
+      subscribeNewsletter(phone);
+      setPhone('');
     }
   };
 
+  const isCompact = variant === 'compact';
+
+  const formContent = (
+    <>
+      {!isCompact && (
+        <>
+          <h2 className="text-4xl md:text-5xl font-heading font-black mb-6 animate-fadeIn">Join the Clan</h2>
+          <p className="text-lg text-white/70 mb-10 animate-fadeIn animation-delay-100">
+            Get game alerts, early-bird slots, and professional sport tips via WhatsApp.
+          </p>
+        </>
+      )}
+      
+      {subscribed ? (
+        <p className="font-heading font-bold text-brand-lime">✅ You are on the list!</p>
+      ) : (
+        <form onSubmit={handleSubmit} className={`flex flex-col ${isCompact ? 'space-y-3' : 'sm:flex-row items-center justify-center gap-3'}`}>
+          <input
+            type="tel"
+            placeholder="ENTER WHATSAPP NUMBER"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+            pattern="[0-9]{10}"
+            title="Please enter a valid 10-digit phone number"
+            className={`bg-white/10 border-2 border-white/10 rounded-xl px-5 py-3 text-white focus:outline-none focus:border-brand-lime transition-all font-body text-sm ${!isCompact && 'w-full sm:w-80'}`}
+          />
+          <button
+            type="submit"
+            className={`bg-brand-lime text-brand-forest px-6 py-3 rounded-xl font-heading font-black text-sm hover:shadow-[0_0_20px_rgba(200,249,2,0.4)] transition-all active:scale-95 uppercase tracking-widest ${isCompact && 'w-full'}`}
+          >
+            Subscribe
+          </button>
+        </form>
+      )}
+    </>
+  );
+
+  if (isCompact) {
+    return <div className="w-full">{formContent}</div>;
+  }
+
   return (
-    <section className="py-12 bg-brand-primary text-white" id="newsletter">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-2xl font-heading mb-4">Stay Updated</h2>
-        <p className="mb-6">Subscribe to our newsletter for the latest games and offers.</p>
-        {subscribed ? (
-          <p className="font-body">✅ You are subscribed!</p>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="px-4 py-2 rounded w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-brand-accent"
-            />
-            <button
-              type="submit"
-              className="bg-brand-accent text-white px-4 py-2 rounded hover:bg-brand-secondary transition"
-            >
-              Subscribe
-            </button>
-          </form>
-        )}
+    <section className="py-24 bg-brand-forest text-white" id="newsletter">
+      <div className="max-w-xl mx-auto text-center px-4">
+        {formContent}
       </div>
     </section>
   );

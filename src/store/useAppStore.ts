@@ -27,7 +27,7 @@ interface AppState {
   openPaymentModal: (game: GamePayment) => void;
   closePaymentModal: () => void;
   processPayment: () => Promise<void>;
-  subscribeNewsletter: (email: string) => void;
+  subscribeNewsletter: (phone: string) => void;
 }
 
 export const useAppStore = create<AppState>((set) => ({
@@ -52,8 +52,8 @@ export const useAppStore = create<AppState>((set) => ({
       }, 1500);
     });
   },
-  subscribeNewsletter: (email) => {
-    console.log('Subscribed newsletter with', email);
+  subscribeNewsletter: (phone) => {
+    console.log('Subscribed newsletter with WhatsApp:', phone);
     set({ newsletterSubscribed: true });
   },
 }));
