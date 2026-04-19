@@ -10,7 +10,7 @@ export default function Footer() {
       {/* Massive Background Text */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 select-none pointer-events-none opacity-5 translate-y-1/2">
         <h2 className="text-[20vw] font-heading font-black leading-none tracking-tighter text-white whitespace-nowrap outline-text text-transparent stroke-white" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)' }}>
-          KHELCLAN
+          KHEL CLAN
         </h2>
       </div>
 
@@ -19,8 +19,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
-            <Link to="/" className="text-3xl font-heading font-black tracking-tighter text-brand-lime mb-6 block">
-              KHEL<span className="text-white">CLAN</span>
+            <Link to="/" className="mb-6 block">
+              <img src="/assets/brand/logo_full.png" alt="KhelClan Logo" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-white/50 font-body mb-8 text-sm leading-relaxed">
               Empowering athletes through innovation and convenience. Redefining the way you play and share.

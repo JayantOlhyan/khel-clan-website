@@ -8,12 +8,13 @@ export default {
     extend: {
       colors: {
         // New TurfHub-inspired palette (Forest Green, Lime, Neutral)
-        "brand-forest": "#1b3a2b",
+        "brand-forest": "#1a4d2e",
         "brand-lime": "#c8f902",
+        "brand-flame": "#ff4d00",
         "brand-neutral": "#f8f9f8",
-        "brand-primary": "#1b3a2b", // Alias for backward compatibility if needed
+        "brand-primary": "#1a4d2e",
         "brand-secondary": "#c8f902",
-        "brand-accent": "#c8f902",
+        "brand-accent": "#ff4d00",
         // Existing KhelClan tokens kept as fallback
         primary: { green: "#1D6A36" },
         energy: { gold: "#D4860A" },
