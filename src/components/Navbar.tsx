@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="w-full bg-brand-forest/90 backdrop-blur-md text-white px-6 py-4 sticky top-0 z-50 border-b border-white/5">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105 group">
-          <img src="/logo.png" alt="KhelClan" className="w-10 h-10 object-contain" />
+          <img src="/logo.png" alt="KhelClan" className="w-10 h-10 rounded-full object-contain bg-white p-1 shadow-sm" />
           <div className="text-2xl font-heading font-black tracking-tighter text-white group-hover:text-brand-accent transition-colors">
             KHEL<span className="text-brand-accent group-hover:text-white">CLAN</span>
           </div>

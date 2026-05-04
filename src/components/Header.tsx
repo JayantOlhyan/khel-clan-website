@@ -12,7 +12,7 @@ export default function Header() {
     <header className="w-full bg-brand-primary text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <Link to="/" className="flex items-center gap-2 group">
-          <img src="/logo.png" alt="KhelClan" className="w-8 h-8 object-contain" />
+          <img src="/logo.png" alt="KhelClan" className="w-9 h-9 rounded-full object-contain bg-white p-1 shadow-sm" />
           <span className="text-2xl font-heading font-bold text-white group-hover:text-brand-accent transition-colors">Khel<span className="text-brand-accent group-hover:text-white">Clan</span></span>
         </Link>
         <nav className="hidden md:flex space-x-6 font-body">

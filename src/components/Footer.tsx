@@ -20,15 +20,15 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="mb-6 block">
-              <img src="/assets/brand/logo_full.png" alt="KhelClan Logo" className="h-10 w-auto object-contain" />
+              <img src="/logo.png" alt="KhelClan Logo" className="h-12 w-12 rounded-full object-contain bg-white p-1" />
             </Link>
             <p className="text-white/50 font-body mb-8 text-sm leading-relaxed">
               Empowering athletes through innovation and convenience. Redefining the way you play and share.
             </p>
             <div className="flex space-x-3">
               {[Share2, MessageSquare, Globe, Video].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white/40 hover:text-brand-lime hover:border-brand-lime transition-all duration-300">
-                  <Icon size={18} />
+                <a key={idx} href="#" className="w-11 h-11 border-2 border-white/30 bg-white/10 rounded-full flex items-center justify-center text-white shadow-sm hover:bg-brand-lime hover:text-brand-forest hover:border-brand-lime hover:scale-110 transition-all duration-300">
+                  <Icon size={20} strokeWidth={2.5} />
                 </a>
               ))}
             </div>
@@ -51,8 +51,8 @@ export default function Footer() {
             <ul className="space-y-4 font-body text-sm text-white/40">
               <li><Link to="/faq" className="hover:text-white transition">Help Center & FAQ</Link></li>
               <li><Link to="/contact" className="hover:text-white transition">Contact Support</Link></li>
-              <li><a href="#" className="hover:text-white transition">Terms of Use</a></li>
-              <li><a href="#" className="hover:text-white transition">Privacy Policy</a></li>
+              <li><Link to="/terms" className="hover:text-white transition">Terms of Use</Link></li>
+              <li><Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
             </ul>
           </div>
 
