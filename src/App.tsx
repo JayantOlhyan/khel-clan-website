@@ -14,6 +14,9 @@ import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import TermsOfUse from './pages/TermsOfUse';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import SportsCategories from './pages/SportsCategories';
+import VenueLocations from './pages/VenueLocations';
+import ForCorporate from './pages/ForCorporate';
 
 // Admin Pages
 import AdminDashboard from './pages/Admin/Dashboard';
@@ -26,10 +29,12 @@ import Clips from './pages/Dashboard/Clips';
 import AuthModal from './components/AuthModal';
 import PaymentModal from './components/PaymentModal';
 import AIAssistant from './components/AIAssistant';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       {/* Global Modals overlaying everything */}
       <AuthModal />
       <PaymentModal />
@@ -40,6 +45,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<GamesList />} />
           <Route path="/games/:id" element={<GameDetails />} />
+          <Route path="/sports" element={<SportsCategories />} />
+          <Route path="/locations" element={<VenueLocations />} />
+          <Route path="/corporate" element={<ForCorporate />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
