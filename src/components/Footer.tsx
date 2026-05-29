@@ -16,7 +16,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Top Section */}
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
+        <div className="grid md:grid-cols-3 gap-12 mb-20">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="mb-6 block">
@@ -54,13 +54,6 @@ export default function Footer() {
               <li><Link to="/terms" className="hover:text-white transition">Terms of Use</Link></li>
               <li><Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
             </ul>
-          </div>
-
-          {/* Newsletter Column */}
-          <div className="bg-white/5 p-6 sm:p-8 rounded-3xl border border-white/10">
-            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">WhatsApp Updates</h4>
-            <p className="text-white/40 font-body mb-6 text-xs">Get instant alerts about new slots and game highlights via WhatsApp.</p>
-            <NewsletterForm variant="compact" />
           </div>
         </div>
 
