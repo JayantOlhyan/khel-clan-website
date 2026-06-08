@@ -16,7 +16,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Top Section */}
-        <div className="grid md:grid-cols-3 gap-12 mb-20">
+        <div className="grid md:grid-cols-4 gap-12 mb-20">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="mb-6 block">
@@ -53,6 +53,31 @@ export default function Footer() {
               <li><Link to="/contact" className="hover:text-white transition">Contact Support</Link></li>
               <li><Link to="/terms" className="hover:text-white transition">Terms of Use</Link></li>
               <li><Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
+            </ul>
+          </div>
+
+          {/* Meet the Team */}
+          <div>
+            <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Meet the Team</h4>
+            <ul className="space-y-4 font-body text-sm text-white/40">
+              <li>
+                <div className="hover:text-white transition cursor-pointer">
+                  <span className="text-white/60 font-semibold block">John Doe</span>
+                  <span className="text-[11px] text-white/30 block">Co-Founder & CEO</span>
+                </div>
+              </li>
+              <li>
+                <div className="hover:text-white transition cursor-pointer">
+                  <span className="text-white/60 font-semibold block">Jane Smith</span>
+                  <span className="text-[11px] text-white/30 block">Chief Technology Officer</span>
+                </div>
+              </li>
+              <li>
+                <div className="hover:text-white transition cursor-pointer">
+                  <span className="text-white/60 font-semibold block">Alex Johnson</span>
+                  <span className="text-[11px] text-white/30 block">Head of Operations</span>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
