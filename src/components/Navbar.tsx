@@ -16,9 +16,9 @@ export default function Navbar() {
           </div>
         </Link>
         <div className="space-x-8 flex items-center font-heading font-black uppercase tracking-widest text-[10px]">
-          <Link to="/games" className="hover:text-brand-lime transition-all hidden md:block">Browse Games</Link>
-          <Link to="/about" className="hover:text-brand-lime transition-all hidden md:block">The Clan</Link>
-          <Link to="/contact" className="hover:text-brand-lime transition-all hidden md:block">Support</Link>
+          <Link to="/games" className="hover:text-brand-lime hover:scale-110 active:scale-95 transition-all duration-300 ease-out hidden md:block transform origin-center">Browse Games</Link>
+          <Link to="/about" className="hover:text-brand-lime hover:scale-110 active:scale-95 transition-all duration-300 ease-out hidden md:block transform origin-center">The Clan</Link>
+          <Link to="/contact" className="hover:text-brand-lime hover:scale-110 active:scale-95 transition-all duration-300 ease-out hidden md:block transform origin-center">Support</Link>
           
           {isAuthenticated ? (
             <div className="flex items-center space-x-6">
