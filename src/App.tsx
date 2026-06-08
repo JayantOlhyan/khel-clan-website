@@ -17,6 +17,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import SportsCategories from './pages/SportsCategories';
 import VenueLocations from './pages/VenueLocations';
 import ForCorporate from './pages/ForCorporate';
+import Sitemap from './pages/Sitemap';
 
 // Admin Pages
 import AdminDashboard from './pages/Admin/Dashboard';
@@ -55,6 +56,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/terms" element={<TermsOfUse />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/sitemap" element={<Sitemap />} />
         </Route>
 
         <Route element={<DashboardLayout />}>
