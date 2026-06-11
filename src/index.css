@@ -30,3 +30,19 @@
     animation-delay: 500ms;
   }
 }
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Fallback to static muted state for users with reduced motion settings */
+  .animate-\[shimmer_1\.5s_infinite_linear\] {
+    animation: none !important;
+    transform: none !important;
+    background: transparent !important;
+  }
+}
+
