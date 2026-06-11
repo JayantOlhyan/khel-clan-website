@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SkeletonLoader from '../components/SkeletonLoader';
 
 export default function GamesList() {
+  const [isLoading, setIsLoading] = useState(true);
+
   // Mock data for initial UI
   const mockGames = [
     { id: 1, sport: 'Football', title: '5v5 Turf War', time: '18:00 PM Today', slots: '3 slots left', location: 'Green Arena Turf', price: '₹250/slot' },
@@ -9,8 +12,20 @@ export default function GamesList() {
     { id: 3, sport: 'Cricket', title: 'Box Cricket League', time: '21:00 PM Today', slots: 'Full', location: 'Skyhigh Roots', price: '₹300/slot' },
   ];
 
+  useEffect(() => {
+    // Simulating standard 1.2s network request
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <SkeletonLoader />;
+  }
+
   return (
-    <div className="p-8 max-w-7xl mx-auto w-full space-y-8">
+    <div className="p-8 max-w-7xl mx-auto w-full space-y-8 animate-[fadeIn_0.2s_ease-in-out]">
       <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-black/10 pb-6 gap-4">
         <div>
           <h1 className="text-4xl font-heading font-extrabold text-primary-green mb-2">Available Games</h1>
