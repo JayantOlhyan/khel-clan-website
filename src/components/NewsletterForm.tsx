@@ -44,11 +44,11 @@ export default function NewsletterForm({ variant = 'section' }: Props) {
             required
             pattern="[0-9]{10}"
             title="Please enter a valid 10-digit phone number"
-            className={`bg-white/10 border-2 border-white/10 rounded-xl px-5 py-3 text-white focus:outline-none focus:border-brand-lime transition-all font-body text-sm w-full ${!isCompact && 'sm:w-80'}`}
+            className={`bg-white/10 border-2 border-white/10 rounded-xl px-5 py-3 text-white focus:outline-none focus:border-brand-lime transition-all font-body text-sm w-full min-h-[48px] ${!isCompact && 'sm:w-80'}`}
           />
           <button
             type="submit"
-            className={`bg-brand-lime text-brand-forest px-6 py-3 rounded-xl font-heading font-black text-sm hover:shadow-[0_0_20px_rgba(200,249,2,0.4)] transition-all active:scale-95 uppercase tracking-wider w-full`}
+            className={`bg-brand-lime text-brand-forest px-6 py-3 rounded-xl font-heading font-black text-sm hover:shadow-[0_0_20px_rgba(200,249,2,0.4)] transition-all active:scale-95 uppercase tracking-wider w-full min-h-[48px]`}
           >
             Subscribe
           </button>

@@ -10,9 +10,9 @@ interface Props {
 
 export default function GameCard({ game }: Props) {
   return (
-    <div className="bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all group">
+    <div className="bg-white rounded-[24px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full">
       {/* Image Area */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative w-full aspect-[4/3] overflow-hidden">
         <img 
           src={game.img || "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80"} 
           alt={game.title} 
@@ -27,9 +27,9 @@ export default function GameCard({ game }: Props) {
       </div>
 
       {/* Content Area */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="font-heading font-black text-xl text-brand-forest truncate pr-2">{game.title}</h3>
+          <h3 className="font-heading font-black text-xl text-brand-forest break-words pr-2">{game.title}</h3>
           <span className="text-lg font-black text-brand-forest">₹{game.price}</span>
         </div>
         
@@ -46,7 +46,7 @@ export default function GameCard({ game }: Props) {
 
         <Link 
           to={`/games/${game.id}`}
-          className="w-full bg-brand-forest text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center hover:bg-black transition group/btn"
+          className="w-full bg-brand-forest text-white py-3 mt-auto rounded-xl font-bold text-sm flex items-center justify-center hover:bg-black transition group/btn min-h-[48px]"
         >
           Book Now 
           <ArrowUpRight size={16} className="ml-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />

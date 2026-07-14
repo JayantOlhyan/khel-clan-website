@@ -6,6 +6,27 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',
+        '3xl': '1920px',
+        '4xl': '2560px',
+        'uw': '3440px',
+      },
+      fontSize: {
+        'xs': ['clamp(0.7rem, 1vw + 0.4rem, 0.75rem)', { lineHeight: '1rem' }],
+        'sm': ['clamp(0.8rem, 1vw + 0.5rem, 0.875rem)', { lineHeight: '1.25rem' }],
+        'base': ['clamp(0.9rem, 1.5vw + 0.5rem, 1rem)', { lineHeight: '1.5rem' }],
+        'lg': ['clamp(1rem, 2vw + 0.5rem, 1.125rem)', { lineHeight: '1.75rem' }],
+        'xl': ['clamp(1.125rem, 2.5vw + 0.5rem, 1.25rem)', { lineHeight: '1.75rem' }],
+        '2xl': ['clamp(1.25rem, 3vw + 0.5rem, 1.5rem)', { lineHeight: '2rem' }],
+        '3xl': ['clamp(1.5rem, 4vw + 0.5rem, 1.875rem)', { lineHeight: '2.25rem' }],
+        '4xl': ['clamp(1.75rem, 5vw + 0.5rem, 2.25rem)', { lineHeight: '2.5rem' }],
+        '5xl': ['clamp(2.25rem, 6vw + 0.5rem, 3rem)', { lineHeight: '1' }],
+        '6xl': ['clamp(2.75rem, 7vw + 0.5rem, 3.75rem)', { lineHeight: '1' }],
+        '7xl': ['clamp(3.25rem, 8vw + 0.5rem, 4.5rem)', { lineHeight: '1' }],
+        '8xl': ['clamp(3.75rem, 9vw + 0.5rem, 6rem)', { lineHeight: '1' }],
+        '9xl': ['clamp(4.25rem, 10vw + 0.5rem, 8rem)', { lineHeight: '1' }],
+      },
       colors: {
         // New TurfHub-inspired palette (Forest Green, Lime, Neutral)
         "brand-forest": "#1a4d2e",

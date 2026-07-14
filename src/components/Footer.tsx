@@ -16,7 +16,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Top Section */}
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="mb-6 block">
@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-3">
               {[Share2, MessageSquare, Globe, Video].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-11 h-11 border-2 border-white/30 bg-white/10 rounded-full flex items-center justify-center text-white shadow-sm hover:bg-brand-lime hover:text-brand-forest hover:border-brand-lime hover:scale-110 transition-all duration-300">
+                <a key={idx} href="#" className="w-12 h-12 border-2 border-white/30 bg-white/10 rounded-full flex items-center justify-center text-white shadow-sm hover:bg-brand-lime hover:text-brand-forest hover:border-brand-lime hover:scale-110 transition-all duration-300">
                   <Icon size={20} strokeWidth={2.5} />
                 </a>
               ))}
@@ -37,44 +37,44 @@ export default function Footer() {
           {/* Platform */}
           <div>
             <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Platform</h4>
-            <ul className="space-y-4 font-body text-sm text-white/40">
-              <li><Link to="/games" className="hover:text-white transition">Browse Games</Link></li>
-              <li><Link to="/sports" className="hover:text-white transition">Sports Categories</Link></li>
-              <li><Link to="/locations" className="hover:text-white transition">Venue Locations</Link></li>
-              <li><Link to="/corporate" className="hover:text-white transition">For Corporate</Link></li>
+            <ul className="space-y-2 font-body text-sm text-white/40">
+              <li><Link to="/games" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Browse Games</Link></li>
+              <li><Link to="/sports" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Sports Categories</Link></li>
+              <li><Link to="/locations" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Venue Locations</Link></li>
+              <li><Link to="/corporate" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">For Corporate</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
             <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Support</h4>
-            <ul className="space-y-4 font-body text-sm text-white/40">
-              <li><Link to="/faq" className="hover:text-white transition">Help Center & FAQ</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition">Contact Support</Link></li>
-              <li><Link to="/terms" className="hover:text-white transition">Terms of Use</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
-              <li><Link to="/sitemap" className="hover:text-white transition">Sitemap</Link></li>
+            <ul className="space-y-2 font-body text-sm text-white/40">
+              <li><Link to="/faq" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Help Center & FAQ</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Contact Support</Link></li>
+              <li><Link to="/terms" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Terms of Use</Link></li>
+              <li><Link to="/privacy" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Privacy Policy</Link></li>
+              <li><Link to="/sitemap" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Sitemap</Link></li>
             </ul>
           </div>
 
           {/* Meet the Team */}
           <div>
             <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Meet the Team</h4>
-            <ul className="space-y-4 font-body text-sm text-white/40">
+            <ul className="space-y-2 font-body text-sm text-white/40">
               <li>
-                <div className="hover:text-white transition cursor-pointer">
+                <div className="hover:text-white transition cursor-pointer py-2 min-h-[48px] flex flex-col justify-center">
                   <span className="text-white/60 font-semibold block">John Doe</span>
                   <span className="text-[11px] text-white/30 block">Co-Founder & CEO</span>
                 </div>
               </li>
               <li>
-                <div className="hover:text-white transition cursor-pointer">
+                <div className="hover:text-white transition cursor-pointer py-2 min-h-[48px] flex flex-col justify-center">
                   <span className="text-white/60 font-semibold block">Jane Smith</span>
                   <span className="text-[11px] text-white/30 block">Chief Technology Officer</span>
                 </div>
               </li>
               <li>
-                <div className="hover:text-white transition cursor-pointer">
+                <div className="hover:text-white transition cursor-pointer py-2 min-h-[48px] flex flex-col justify-center">
                   <span className="text-white/60 font-semibold block">Alex Johnson</span>
                   <span className="text-[11px] text-white/30 block">Head of Operations</span>
                 </div>
@@ -86,10 +86,10 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-white/30 font-body text-[10px] uppercase tracking-widest font-bold">
           <p>© 2026 KHELCLAN. ALL RIGHTS RESERVED.</p>
-          <div className="flex space-x-8 mt-6 md:mt-0">
-             <a href="#" className="hover:text-white transition">LinkedIn</a>
-             <a href="#" className="hover:text-white transition">Instagram</a>
-             <a href="#" className="hover:text-white transition">YouTube</a>
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-8 mt-6 md:mt-0 text-center">
+             <a href="#" className="hover:text-white transition min-h-[48px] flex items-center justify-center">LinkedIn</a>
+             <a href="#" className="hover:text-white transition min-h-[48px] flex items-center justify-center">Instagram</a>
+             <a href="#" className="hover:text-white transition min-h-[48px] flex items-center justify-center">YouTube</a>
           </div>
         </div>
       </div>

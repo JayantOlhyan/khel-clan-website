@@ -12,6 +12,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+  
+  img, video {
+    @apply max-w-full h-auto object-cover;
+  }
+  
+  /* Global button touch target baseline */
+  button, .button-class-if-any {
+    @apply min-h-[48px];
+  }
 }
 @layer utilities {
   .animation-delay-100 {

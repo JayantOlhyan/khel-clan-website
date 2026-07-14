@@ -65,7 +65,7 @@ export default function AIAssistant() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="w-[350px] md:w-[400px] h-[500px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-gray-100 animate-slideUp">
+        <div className="w-[90vw] max-w-[400px] h-[70vh] max-h-[500px] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-gray-100 animate-slideUp">
           {/* Header */}
           <div className="bg-brand-forest p-6 text-white flex justify-between items-center">
             <div className="flex items-center space-x-3">
@@ -77,7 +77,7 @@ export default function AIAssistant() {
                 <p className="text-xs text-brand-lime/70 uppercase tracking-widest font-bold">RAG Enabled AI</p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="hover:rotate-90 transition transform">
+            <button onClick={() => setIsOpen(false)} className="hover:rotate-90 transition transform min-h-[48px] min-w-[48px] flex items-center justify-center">
               <X size={24} />
             </button>
           </div>
@@ -113,7 +113,7 @@ export default function AIAssistant() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about culture, rules..."
-              className="flex-grow bg-gray-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-lime transition outline-none"
+              className="flex-grow bg-gray-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-lime transition outline-none min-h-[48px]"
             />
             <button 
               type="submit"
