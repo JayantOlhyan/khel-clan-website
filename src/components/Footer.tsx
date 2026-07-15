@@ -57,30 +57,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Meet the Team */}
-          <div>
-            <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Meet the Team</h4>
-            <ul className="space-y-2 font-body text-sm text-white/40">
-              <li>
-                <div className="hover:text-white transition cursor-pointer py-2 min-h-[48px] flex flex-col justify-center">
-                  <span className="text-white/60 font-semibold block">John Doe</span>
-                  <span className="text-[11px] text-white/30 block">Co-Founder & CEO</span>
-                </div>
-              </li>
-              <li>
-                <div className="hover:text-white transition cursor-pointer py-2 min-h-[48px] flex flex-col justify-center">
-                  <span className="text-white/60 font-semibold block">Jane Smith</span>
-                  <span className="text-[11px] text-white/30 block">Chief Technology Officer</span>
-                </div>
-              </li>
-              <li>
-                <div className="hover:text-white transition cursor-pointer py-2 min-h-[48px] flex flex-col justify-center">
-                  <span className="text-white/60 font-semibold block">Alex Johnson</span>
-                  <span className="text-[11px] text-white/30 block">Head of Operations</span>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom Section */}
