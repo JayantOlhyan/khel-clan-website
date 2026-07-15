@@ -5,6 +5,7 @@ import cultureData from '../data/cultureData.json';
 
 export default function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
     { role: 'bot', text: 'Hi! I am the KhelClan Assistant. Ask me anything about our culture, rules, or how we work!' }
@@ -17,6 +18,18 @@ export default function AIAssistant() {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages, isTyping]);
+
+  useEffect(() => {
+    const footer = document.querySelector('footer');
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setHidden(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,14 +65,28 @@ export default function AIAssistant() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[100] font-body">
+    <div className={`fixed bottom-6 right-6 z-[100] font-body transition-all duration-300 ${hidden ? 'opacity-0 translate-y-4 pointer-events-none' : 'opacity-100 translate-y-0 animate-fadeIn'}`}>
       {/* Toggle Button */}
       {!isOpen && (
         <button 
           onClick={() => setIsOpen(true)}
           className="w-16 h-16 bg-brand-forest text-brand-lime rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition transform active:scale-95 group"
         >
-          <MessageCircle size={32} className="group-hover:rotate-12 transition-transform" />
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="32" 
+            height="32" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            className="group-hover:rotate-12 transition-transform"
+          >
+            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+            <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+          </svg>
         </button>
       )}
 
