@@ -1,16 +1,18 @@
-// src/layouts/AdminLayout.tsx
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, FileText, Settings, Users, ArrowLeft } from 'lucide-react';
+import { LayoutDashboard, FileText, Settings, Users, ArrowLeft, Trophy, Flag, Shield, Activity } from 'lucide-react';
 
 export default function AdminLayout() {
   const location = useLocation();
 
   const navItems = [
     { label: 'Dashboard', path: '/admin/dashboard', icon: <LayoutDashboard size={20} /> },
-    { label: 'Culture & RAG', path: '/admin/culture', icon: <FileText size={20} /> },
-    { label: 'Content Management', path: '/admin/content', icon: <Settings size={20} /> },
     { label: 'Users', path: '/admin/users', icon: <Users size={20} /> },
+    { label: 'Games', path: '/admin/games', icon: <Activity size={20} /> },
+    { label: 'Groups', path: '/admin/groups', icon: <Shield size={20} /> },
+    { label: 'Reports', path: '/admin/reports', icon: <Flag size={20} /> },
+    { label: 'Content', path: '/admin/content', icon: <FileText size={20} /> },
+    { label: 'Sports Manager', path: '/admin/sports', icon: <Trophy size={20} /> },
   ];
 
   return (

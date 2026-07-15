@@ -1,8 +1,6 @@
 // src/components/Footer.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Share2, Globe, MessageSquare, Video } from 'lucide-react';
-import NewsletterForm from './NewsletterForm';
 
 export default function Footer() {
   return (
@@ -16,57 +14,68 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Top Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mb-20">
+          
           {/* Brand Column */}
-          <div className="col-span-1 md:col-span-1">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
             <Link to="/" className="mb-6 block">
               <img src="/logo.png" alt="KhelClan Logo" className="h-12 w-12 rounded-full object-contain bg-white p-1" />
             </Link>
-            <p className="text-white/50 font-body mb-8 text-sm leading-relaxed">
+            <p className="text-white/50 font-body text-sm leading-relaxed">
               Empowering athletes through innovation and convenience. Redefining the way you play and share.
             </p>
-            <div className="flex space-x-3">
-              {[Share2, MessageSquare, Globe, Video].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-12 h-12 border-2 border-white/30 bg-white/10 rounded-full flex items-center justify-center text-white shadow-sm hover:bg-brand-lime hover:text-brand-forest hover:border-brand-lime hover:scale-110 transition-all duration-300">
-                  <Icon size={20} strokeWidth={2.5} />
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Platform */}
+          {/* Explore */}
           <div>
-            <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Platform</h4>
-            <ul className="space-y-2 font-body text-sm text-white/40">
-              <li><Link to="/games" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Browse Games</Link></li>
-              <li><Link to="/sports" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Sports Categories</Link></li>
-              <li><Link to="/locations" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Venue Locations</Link></li>
-              <li><Link to="/corporate" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">For Corporate</Link></li>
+            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">Explore</h4>
+            <ul className="space-y-2 font-body text-sm text-white/50">
+              <li><Link to="/games" className="hover:text-white transition">Find Games</Link></li>
+              <li><Link to="/players" className="hover:text-white transition">Find Players</Link></li>
+              <li><Link to="/groups" className="hover:text-white transition">Groups</Link></li>
+              <li><Link to="/sports" className="hover:text-white transition">Sports</Link></li>
+              <li><Link to="/venues" className="hover:text-white transition">Venues</Link></li>
+              <li><Link to="/events" className="hover:text-white transition">Events</Link></li>
+            </ul>
+          </div>
+
+          {/* KhelClan */}
+          <div>
+            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">KhelClan</h4>
+            <ul className="space-y-2 font-body text-sm text-white/50">
+              <li><Link to="/about" className="hover:text-white transition">About</Link></li>
+              <li><Link to="/how-it-works" className="hover:text-white transition">How It Works</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition">Contact</Link></li>
+              <li><Link to="/download" className="hover:text-white transition">Download App</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h4 className="font-heading font-bold text-xs mb-8 text-brand-lime uppercase tracking-[0.2em]">Support</h4>
-            <ul className="space-y-2 font-body text-sm text-white/40">
-              <li><Link to="/faq" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Help Center & FAQ</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Contact Support</Link></li>
-              <li><Link to="/terms" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Terms of Use</Link></li>
-              <li><Link to="/privacy" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Privacy Policy</Link></li>
-              <li><Link to="/sitemap" className="hover:text-white transition inline-block py-2 min-h-[48px] flex items-center">Sitemap</Link></li>
+            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">Support</h4>
+            <ul className="space-y-2 font-body text-sm text-white/50">
+              <li><Link to="/help" className="hover:text-white transition">Help Center</Link></li>
+              <li><Link to="/safety" className="hover:text-white transition">Safety</Link></li>
+              <li><Link to="/community-guidelines" className="hover:text-white transition">Community Guidelines</Link></li>
+              <li><Link to="/feedback" className="hover:text-white transition">Feedback</Link></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-heading font-bold text-xs mb-6 text-brand-lime uppercase tracking-[0.2em]">Legal</h4>
+            <ul className="space-y-2 font-body text-sm text-white/50">
+              <li><Link to="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="hover:text-white transition">Terms of Service</Link></li>
+              <li><Link to="/cookies" className="hover:text-white transition">Cookie Policy</Link></li>
             </ul>
           </div>
 
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-white/30 font-body text-[10px] uppercase tracking-widest font-bold">
-          <p>© 2026 KHELCLAN. ALL RIGHTS RESERVED.</p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-8 mt-6 md:mt-0 text-center">
-             <a href="#" className="hover:text-white transition min-h-[48px] flex items-center justify-center">LinkedIn</a>
-             <a href="#" className="hover:text-white transition min-h-[48px] flex items-center justify-center">Instagram</a>
-             <a href="#" className="hover:text-white transition min-h-[48px] flex items-center justify-center">YouTube</a>
-          </div>
+        <div className="pt-8 border-t border-white/5 text-center text-white/30 font-body text-xs">
+          <p>© {new Date().getFullYear()} KHELCLAN. ALL RIGHTS RESERVED.</p>
         </div>
       </div>
     </footer>

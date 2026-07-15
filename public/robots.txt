@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
-
-# Exclude admin and dashboard routes
 Disallow: /admin/
 Disallow: /dashboard/
+Disallow: /settings/
+Disallow: /messages/
+Disallow: /notifications/
+Disallow: /activity/
 
-Sitemap: https://khelclan.online/sitemap.xml
+Sitemap: https://khelclan.com/sitemap.xml

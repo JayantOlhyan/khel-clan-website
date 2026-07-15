@@ -35,8 +35,12 @@ export default function DashboardLayout() {
 
         <nav className="flex flex-col gap-2 flex-grow">
            <Link to="/dashboard" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/dashboard')}`}>Overview</Link>
+           <Link to="/feed" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/feed')}`}>Feed</Link>
+           <Link to="/discover" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/discover')}`}>Discover</Link>
+           <Link to="/search" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/search')}`}>Search</Link>
+           <Link to="/messages" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/messages')}`}>Messages</Link>
+           <Link to="/notifications" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/notifications')}`}>Notifications</Link>
            <Link to="/dashboard/clips" className={`p-3 rounded-xl font-heading font-bold transition-all ${isActive('/dashboard/clips')}`}>My Clips</Link>
-           <Link to="/games" className="p-3 rounded-xl font-heading font-bold text-deep-black/60 hover:bg-black/5 transition-all mt-4 border border-transparent hover:border-black/5">Browse Games</Link>
         </nav>
         
         <button onClick={logout} className="mt-auto p-3 text-left font-heading font-bold text-red-500 hover:bg-red-50 rounded-xl transition-colors">
