@@ -13,7 +13,7 @@ export default function Coaches() {
         <p className="text-lg text-gray-600 mb-8 max-w-3xl font-body">
           Elevate your game with top-tier coaches in your area.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-autofit gap-6">
           {coaches.map(c => (
             <Link key={c.id} to={`/coaches/${c.username}`} className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
               <div className="flex justify-between items-start mb-4">

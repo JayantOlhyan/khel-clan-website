@@ -28,7 +28,7 @@ export default function SkeletonLoader() {
       </div>
 
       {/* Grid skeleton matching the 3-column layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-autofit gap-6">
         {Array.from({ length: 3 }).map((_, idx) => (
           <div
             key={idx}

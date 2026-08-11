@@ -301,7 +301,7 @@ export default function GameDetails() {
       {/* 4. MORE GAMES LIKES THIS */}
       <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10">
         <h3 className="font-heading font-black text-2xl uppercase mb-8">MORE GAMES LIKE THIS</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-autofit gap-6">
            {[
              { title: "Night Football Match", loc: "City Football Turf, Mayur Vihar", date: "Today, 9:30 PM", format: "7 v 7", price: "₹120", img: "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&q=80&w=400" },
              { title: "Sunday Football Game", loc: "Play Arena, Lajpat Nagar", date: "Tomorrow, 8:00 AM", format: "7 v 7", price: "₹100", img: "https://images.unsplash.com/photo-1574629810360-7efbc18974bf?auto=format&fit=crop&q=80&w=400" },

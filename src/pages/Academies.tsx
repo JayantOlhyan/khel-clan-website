@@ -12,7 +12,7 @@ export default function Academies() {
         <p className="text-lg text-gray-600 mb-8 max-w-3xl font-body">
           Find elite sports academies for comprehensive youth and adult development.
         </p>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-autofit gap-6">
           {academies.map(a => (
             <Link key={a.id} to={`/academies/${a.slug}`} className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
               <h2 className="text-2xl font-bold text-brand-forest mb-2">{a.name}</h2>

@@ -7,7 +7,51 @@
     <title>KhelClan | Premium Sports Hub</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <style>
+        body { margin: 0; background-color: #05110a; }
+        .shell-skeleton { display: flex; flex-direction: column; min-height: 100vh; font-family: sans-serif; }
+        .shell-header { height: 80px; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; padding: 0 24px; justify-content: space-between; }
+        .shell-logo { width: 140px; height: 32px; background: rgba(255,255,255,0.05); border-radius: 8px; }
+        .shell-nav { display: flex; gap: 24px; }
+        .shell-nav-item { width: 80px; height: 20px; background: rgba(255,255,255,0.05); border-radius: 4px; }
+        .shell-hero { padding: 80px 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .shell-title { width: 60%; max-width: 600px; height: 64px; background: rgba(255,255,255,0.05); border-radius: 12px; }
+        .shell-subtitle { width: 40%; max-width: 400px; height: 24px; background: rgba(255,255,255,0.05); border-radius: 6px; }
+        .shell-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; padding: 48px 24px; max-width: 1280px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+        .shell-card { height: 320px; background: rgba(255,255,255,0.05); border-radius: 16px; }
+        
+        .pulse { animation: pulse 1.5s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        
+        @media (max-width: 768px) {
+          .shell-nav { display: none; }
+          .shell-title { width: 90%; height: 48px; }
+          .shell-subtitle { width: 80%; }
+        }
+      </style>
+      <div class="shell-skeleton" aria-busy="true" aria-live="polite">
+        <div class="shell-header">
+          <div class="shell-logo pulse"></div>
+          <div class="shell-nav">
+            <div class="shell-nav-item pulse"></div>
+            <div class="shell-nav-item pulse"></div>
+            <div class="shell-nav-item pulse"></div>
+            <div class="shell-nav-item pulse"></div>
+          </div>
+        </div>
+        <div class="shell-hero">
+          <div class="shell-title pulse"></div>
+          <div class="shell-subtitle pulse"></div>
+        </div>
+        <div class="shell-grid">
+          <div class="shell-card pulse"></div>
+          <div class="shell-card pulse"></div>
+          <div class="shell-card pulse"></div>
+          <div class="shell-card pulse"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

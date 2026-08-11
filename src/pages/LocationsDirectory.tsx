@@ -22,10 +22,10 @@ export default function LocationsDirectory() {
           }}></div>
           
           {/* Radar Circles */}
-          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[800px] h-[800px] border border-brand-lime/10 rounded-full animate-[spin_60s_linear_infinite]"></div>
-          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[600px] h-[600px] border border-brand-lime/20 rounded-full"></div>
-          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[400px] h-[400px] border border-brand-lime/30 rounded-full"></div>
-          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[200px] h-[200px] border border-brand-lime/40 rounded-full bg-brand-lime/5"></div>
+          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[200vw] lg:w-[800px] aspect-square border border-brand-lime/10 rounded-full animate-[spin_60s_linear_infinite]"></div>
+          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[150vw] lg:w-[600px] aspect-square border border-brand-lime/20 rounded-full"></div>
+          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[100vw] lg:w-[400px] aspect-square border border-brand-lime/30 rounded-full"></div>
+          <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-10 w-[50vw] lg:w-[200px] aspect-square border border-brand-lime/40 rounded-full bg-brand-lime/5"></div>
           
           {/* User Location Node */}
           <div className="absolute top-1/2 left-[70%] -translate-x-1/2 -translate-y-1/2 z-20">
@@ -263,9 +263,9 @@ export default function LocationsDirectory() {
                  <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover opacity-30" alt="Map" style={{ filter: 'invert(1) hue-rotate(180deg) saturate(0.5) contrast(1.5)' }}/>
                  
                  {/* Radar UI on Map */}
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[400px] h-[400px] border border-brand-lime/10 rounded-full"></div>
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[250px] h-[250px] border border-brand-lime/20 rounded-full"></div>
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[100px] h-[100px] border border-brand-lime/30 rounded-full bg-brand-lime/5"></div>
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-full max-w-[400px] aspect-square border border-brand-lime/10 rounded-full"></div>
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-full max-w-[250px] aspect-square border border-brand-lime/20 rounded-full"></div>
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[30%] max-w-[100px] aspect-square border border-brand-lime/30 rounded-full bg-brand-lime/5"></div>
                  
                  {/* Center Dot */}
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
@@ -338,7 +338,7 @@ export default function LocationsDirectory() {
       <section className="py-12 border-t border-white/10 bg-[#0a1a12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <h2 className="font-heading font-black text-2xl mb-8">Why Play Near You?</h2>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+           <div className="grid grid-autofit gap-6">
              
              <div className="flex items-start gap-4">
                <div className="w-12 h-12 rounded-full border border-brand-lime/30 flex items-center justify-center text-brand-lime flex-shrink-0 bg-brand-lime/5">

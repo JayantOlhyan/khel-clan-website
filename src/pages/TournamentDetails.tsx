@@ -164,7 +164,7 @@ export default function TournamentDetails() {
                  </div>
                </div>
 
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 pt-8 border-t border-white/10">
+               <div className="grid grid-autofit gap-4 mt-8 pt-8 border-t border-white/10">
                  <div className="flex items-center gap-3">
                    <div className="w-10 h-10 rounded border border-white/10 bg-[#05110a] flex items-center justify-center text-brand-lime"><Calendar size={20}/></div>
                    <div>
@@ -232,7 +232,7 @@ export default function TournamentDetails() {
             </div>
 
             {/* Middle Grid (Prize, Highlights, Rules) */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-autofit gap-6">
                
                {/* Prize Pool */}
                <div className="bg-[#0a1a12] border border-white/10 rounded-2xl p-6 flex flex-col">

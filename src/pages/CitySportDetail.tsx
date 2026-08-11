@@ -247,7 +247,7 @@ export default function CitySportDetail() {
                 <button className="text-brand-lime text-[10px] font-bold uppercase tracking-widest hover:underline">View all</button>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-autofit gap-4">
                  {[
                    { name: "Arjun Mehta", pos: "Forward", level: "Intermediate", availability: "Looking for game • Anytime", rating: "4.7", img: "https://i.pravatar.cc/150?u=41" },
                    { name: "Rohan Singh", pos: "Midfielder", level: "Advanced", availability: "Available after 6 PM", rating: "4.6", img: "https://i.pravatar.cc/150?u=42" },
@@ -324,15 +324,15 @@ export default function CitySportDetail() {
             </div>
 
             {/* Mini Map */}
-            <div className="bg-[#0a1a12] border border-white/10 rounded-2xl p-6 h-[400px] flex flex-col">
+            <div className="bg-[#0a1a12] border border-white/10 rounded-2xl p-6 aspect-square sm:h-[400px] flex flex-col">
               <h3 className="font-heading font-black text-xl mb-4">Games Near You</h3>
               
               <div className="flex-grow rounded-xl bg-[#05110a] border border-white/10 relative overflow-hidden">
                  <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover opacity-30" alt="Map" style={{ filter: 'invert(1) hue-rotate(180deg) saturate(0.5) contrast(1.5)' }}/>
                  
                  {/* Radar UI on Map */}
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[250px] h-[250px] border border-brand-lime/10 rounded-full"></div>
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[150px] h-[150px] border border-brand-lime/20 rounded-full bg-brand-lime/5"></div>
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[60%] max-w-[250px] aspect-square border border-brand-lime/10 rounded-full"></div>
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[40%] max-w-[150px] aspect-square border border-brand-lime/20 rounded-full bg-brand-lime/5"></div>
                  
                  {/* Center Dot */}
                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-3 h-3 rounded-full bg-blue-500 border border-white shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>

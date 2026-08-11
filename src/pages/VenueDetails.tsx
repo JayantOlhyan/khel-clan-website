@@ -149,7 +149,7 @@ export default function VenueDetails() {
                  Green Field Arena is one of New Delhi's most loved football turfs. Our 11-a-side turf is FIFA recommended and perfect for casual matches, tournaments and training sessions.
                </p>
                
-               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+               <div className="grid grid-autofit gap-6">
                  <div>
                    <div className="flex items-center gap-2 text-brand-lime mb-1"><MapPin size={16}/> <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Venue Type</span></div>
                    <div className="font-bold">Outdoor</div>
@@ -168,7 +168,7 @@ export default function VenueDetails() {
                  </div>
                </div>
 
-               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-white/10">
+               <div className="grid grid-autofit gap-4 mt-8 pt-8 border-t border-white/10">
                  <div className="text-center">
                    <div className="font-heading font-black text-2xl text-brand-lime mb-1">1,250+</div>
                    <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Matches Played</div>
@@ -191,7 +191,7 @@ export default function VenueDetails() {
             {/* Facilities Block */}
             <div className="bg-[#0a1a12] border border-white/10 rounded-2xl p-6 lg:p-8">
                <h3 className="font-heading font-black text-xl mb-6">Facilities</h3>
-               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+               <div className="grid grid-cols-1 sm:grid-autofit gap-6">
                  <div className="flex items-start gap-4">
                    <div className="w-10 h-10 rounded-lg bg-[#05110a] border border-white/10 flex items-center justify-center text-brand-lime flex-shrink-0"><CheckCircle size={20}/></div>
                    <div>
@@ -261,7 +261,7 @@ export default function VenueDetails() {
                  <h3 className="font-heading font-black text-xl">Gallery</h3>
                  <button className="text-brand-lime text-xs font-bold uppercase tracking-widest hover:underline">View All</button>
                </div>
-               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+               <div className="grid grid-autofit gap-4">
                  <img src="https://images.unsplash.com/photo-1518605368461-1ee51a4bbce4?auto=format&fit=crop&q=80&w=400" className="w-full h-32 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer" alt="Gallery"/>
                  <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=400" className="w-full h-32 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer" alt="Gallery"/>
                  <img src="https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&q=80&w=400" className="w-full h-32 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer" alt="Gallery"/>

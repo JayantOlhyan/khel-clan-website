@@ -25,7 +25,7 @@ export default function HowItWorks() {
     <section className="py-24 bg-muted-green" id="how-it-works">
       <div className="max-w-5xl mx-auto text-center px-4">
         <h2 className="text-4xl md:text-5xl font-heading font-black text-deep-black mb-16 animate-fadeIn">Step Onto the Pitch</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-autofit gap-8">
           {steps.map((step, idx) => (
             <div key={idx} className="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition transform hover:-translate-y-1 animate-fadeIn" style={{ animationDelay: `${idx * 150}ms` }}>
               <div className="mb-4 flex justify-center">{step.icon}</div>

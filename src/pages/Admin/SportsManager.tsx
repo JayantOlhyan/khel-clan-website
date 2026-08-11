@@ -29,7 +29,7 @@ export default function SportsManager() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
         {/* Sports List */}
-        <div className="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col h-[600px]">
+        <div className="lg:col-span-1 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col min-h-[400px] lg:h-[600px]">
           <div className="p-4 border-b border-gray-100">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
@@ -134,7 +134,7 @@ export default function SportsManager() {
               </form>
             </div>
           ) : (
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-12 flex flex-col items-center justify-center text-center h-[600px]">
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-12 flex flex-col items-center justify-center text-center min-h-[400px] lg:h-[600px]">
               <AlertCircle size={48} className="text-gray-300 mb-4" />
               <h3 className="text-xl font-bold text-gray-400 mb-2">No Sport Selected</h3>
               <p className="text-sm text-gray-400">Select a sport from the list to view and edit its details.</p>

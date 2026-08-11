@@ -36,7 +36,7 @@ export default function SportsDetails() {
               Join local matches, leagues and tournaments. Find your team, your ground and your game.
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+            <div className="grid grid-autofit gap-6 mb-10">
                <div>
                  <div className="font-heading font-black text-2xl text-white">45+</div>
                  <div className="text-xs font-bold text-gray-500 uppercase tracking-widest">Games every week</div>
@@ -224,7 +224,7 @@ export default function SportsDetails() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-autofit gap-6">
           {[
             { tag: "LEAGUE", name: "Khel Clan Sunday League", format: "11 v 11", teams: "32 Teams", date: "Starts 25 May 2025" },
             { tag: "TOURNAMENT", name: "Summer Football Cup 2025", format: "7 v 7", teams: "16 Teams", date: "Starts 06 Jun 2025" },

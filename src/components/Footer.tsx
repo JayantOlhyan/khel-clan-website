@@ -14,10 +14,10 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         {/* Top Section */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-20">
           
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-3 lg:col-span-1 mb-8 lg:mb-0">
+          <div className="md:col-span-2 lg:col-span-1 mb-8 lg:mb-0">
             <Link to="/" className="mb-6 block">
               <img src="/logo.png" alt="KhelClan Logo" className="h-12 w-12 rounded-full object-contain bg-white p-1" />
             </Link>

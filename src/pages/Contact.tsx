@@ -97,7 +97,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-white animate-slideUp">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-autofit gap-6">
                 <div>
                   <label className="block text-xs font-heading font-black text-brand-forest mb-3 uppercase tracking-[0.2em]">Full Name</label>
                   <input 

@@ -12,7 +12,7 @@ export default function Safety() {
           KhelClan connects people in the real world. Your safety is not an optional feature—it is the foundation of our platform.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 text-left">
+        <div className="grid grid-autofit gap-6 text-left">
           <div className="bg-white p-8 rounded-[32px] shadow-sm border border-black/5">
             <h3 className="text-xl font-bold font-heading text-brand-forest mb-3 flex items-center gap-2">
               <Users className="text-blue-500" /> Real People, Real Identity

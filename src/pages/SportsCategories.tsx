@@ -66,7 +66,7 @@ export default function SportsCategories() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-autofit gap-6">
             {sports.filter(s => s.name.toLowerCase().includes(searchTerm.toLowerCase())).map((sport, i) => (
               <Link to={`/discover?sport=${sport.name.toLowerCase()}`} key={i} className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#0a1a12] border border-white/10 hover:border-brand-lime/50 transition-colors">
                 <img src={sport.img} alt={sport.name} className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-700" />

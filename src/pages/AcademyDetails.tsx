@@ -21,7 +21,7 @@ export default function AcademyDetails() {
           <p className="text-xl text-gray-600">{a.description}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-autofit gap-8 mb-12">
           <div className="flex items-center gap-3 text-gray-600">
             <MapPin className="text-brand-forest" size={24} />
             <div><p className="text-xs text-gray-400">Location</p><p className="font-bold">{a.location}</p></div>

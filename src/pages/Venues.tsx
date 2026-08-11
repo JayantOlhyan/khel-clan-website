@@ -205,7 +205,7 @@ export default function Venues() {
                </div>
              </div>
 
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+             <div className="grid grid-autofit gap-6">
                
                {/* Venue Card 1 */}
                <div className="bg-[#0a1a12] border border-white/10 rounded-2xl overflow-hidden group hover:border-brand-lime/50 transition-colors flex flex-col h-full relative">

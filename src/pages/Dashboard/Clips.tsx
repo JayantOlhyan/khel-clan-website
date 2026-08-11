@@ -13,7 +13,7 @@ export default function Clips() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-autofit gap-6">
         {[1,2,3].map(i => (
           <div key={i} className="bg-white rounded-2xl p-4 shadow-sm border border-black/5 group hover:shadow-xl transition-all duration-300">
              <div className="aspect-video bg-black/5 rounded-xl mb-5 relative overflow-hidden flex items-center justify-center ring-2 ring-transparent group-hover:ring-primary-green/20 transition-all">

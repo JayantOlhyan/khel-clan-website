@@ -80,7 +80,7 @@ export default function About() {
       {/* 3. CORE VALUES */}
       <section className="py-24 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-autofit gap-8">
             {[
               { icon: Users, title: "COMMUNITY FIRST", desc: "We believe sports bring people together and create stronger communities." },
               { icon: Trophy, title: "FAIR PLAY", desc: "Respect, discipline and sportsmanship are at the heart of everything we do." },
@@ -124,7 +124,7 @@ export default function About() {
       {/* 4. STATS ROW */}
       <section className="py-12 border-b border-white/10 bg-[#0a1a12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+          <div className="grid grid-autofit gap-8 text-center divide-x divide-white/10">
              {[
                { val: "500+", label: "Active Members" },
                { val: "25+", label: "Teams & Groups" },
@@ -152,7 +152,7 @@ export default function About() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-autofit gap-6">
           {[
             { name: "Aman Verma", role: "Founder", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" },
             { name: "Rohan Mehta", role: "Co-Founder", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" },

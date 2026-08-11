@@ -38,6 +38,9 @@
   .animation-delay-500 {
     animation-delay: 500ms;
   }
+  .grid-autofit {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
 @keyframes shimmer {

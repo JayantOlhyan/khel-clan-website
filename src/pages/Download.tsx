@@ -10,8 +10,8 @@ export default function DownloadApp() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-3/4 h-[800px] bg-brand-forest/20 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-[600px] bg-brand-lime/5 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/3"></div>
+          <div className="absolute top-0 right-0 w-3/4 h-[100vw] lg:h-[800px] bg-brand-forest/20 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/4"></div>
+          <div className="absolute bottom-0 left-0 w-1/2 h-[75vw] lg:h-[600px] bg-brand-lime/5 rounded-full blur-[100px] -translate-x-1/4 translate-y-1/3"></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,9 +72,9 @@ export default function DownloadApp() {
 
             {/* Right Mockups */}
             <div className="lg:col-span-7 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[500px] h-[600px]">
+              <div className="relative w-full max-w-[500px] aspect-[5/6]">
                 {/* Back Phone */}
-                <div className="absolute right-0 top-12 w-[280px] h-[580px] bg-[#111] rounded-[40px] border-8 border-[#222] shadow-2xl overflow-hidden transform rotate-6 z-0">
+                <div className="absolute right-0 top-12 w-[60%] aspect-[280/580] bg-[#111] rounded-[40px] border-8 border-[#222] shadow-2xl overflow-hidden transform rotate-6 z-0">
                   <img src="https://images.unsplash.com/photo-1518605368461-1ee51a4bbce4?auto=format&fit=crop&q=80&w=400" className="w-full h-full object-cover opacity-50" alt="App Screen 2"/>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#05110a] to-transparent"></div>
                   {/* Fake UI Overlay */}
@@ -90,7 +90,7 @@ export default function DownloadApp() {
                 </div>
                 
                 {/* Front Phone */}
-                <div className="absolute left-0 lg:left-12 top-0 w-[300px] h-[620px] bg-[#05110a] rounded-[45px] border-[10px] border-[#1a1a1a] shadow-[-20px_20px_60px_rgba(0,0,0,0.8)] overflow-hidden z-10">
+                <div className="absolute left-0 lg:left-12 top-0 w-[65%] aspect-[300/620] bg-[#05110a] rounded-[45px] border-[10px] border-[#1a1a1a] shadow-[-20px_20px_60px_rgba(0,0,0,0.8)] overflow-hidden z-10">
                   {/* Notch */}
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#1a1a1a] rounded-b-xl z-20"></div>
                   {/* App UI */}
@@ -194,7 +194,7 @@ export default function DownloadApp() {
             <h2 className="font-heading font-black text-3xl">How to Download</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div className="grid grid-autofit gap-8 relative">
             {/* Connecting Line */}
             <div className="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-px bg-white/10 -translate-y-1/2"></div>
             
@@ -252,7 +252,7 @@ export default function DownloadApp() {
              </div>
            </div>
            
-           <div className="relative z-10 w-full max-w-[300px] h-[300px] flex-shrink-0 hidden md:block">
+           <div className="relative z-10 w-full max-w-[300px] aspect-square flex-shrink-0 hidden md:block">
               {/* Fake phone tilted */}
               <div className="absolute inset-0 bg-[#111] rounded-[40px] border-8 border-[#222] shadow-2xl overflow-hidden transform rotate-12 -translate-y-8">
                 <div className="h-full w-full bg-[#05110a] flex items-center justify-center">

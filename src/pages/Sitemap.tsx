@@ -141,7 +141,7 @@ export default function Sitemap() {
 
         {/* Directory Columns - High density Apple format */}
         {filteredDirectory.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-12 gap-x-8">
+          <div className="grid grid-cols-1 sm:grid-autofit lg:grid-cols-5 gap-y-12 gap-x-8">
             {filteredDirectory.map((category) => (
               <div key={category.title} className="flex flex-col space-y-4">
                 {/* Section Title */}

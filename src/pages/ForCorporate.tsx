@@ -115,7 +115,7 @@ export default function ForCorporate() {
             <p className="text-gray-500 font-body text-base">Flexible event schemes for small businesses up to Fortune 500 organizations.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-autofit gap-8">
             {tiers.map((tier, index) => (
               <div
                 key={tier.name}

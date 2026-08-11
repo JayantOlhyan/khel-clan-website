@@ -15,7 +15,7 @@ export default function GameGrid() {
           <p className="text-gray-500 max-w-md">Discover top-rated sports venues and join competitive games in your city.</p>
         </div>
         
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 sm:gap-8">
+        <div className="grid grid-autofit gap-6 sm:gap-8">
           {games.map((game, idx) => (
             <div key={game.id} className="animate-fadeIn h-full" style={{ animationDelay: `${idx * 150}ms`, animationFillMode: 'both' }}>
               <GameCard game={game} />

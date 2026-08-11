@@ -69,7 +69,7 @@ export default function Home() {
       {/* 2. STATS/PILLARS GRID */}
       <section className="border-b border-white/10 bg-[#0a1a12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-x divide-y md:divide-y-0 divide-white/10 border-x border-white/10">
+          <div className="grid grid-autofit lg:grid-cols-6 divide-x divide-y md:divide-y-0 divide-white/10 border-x border-white/10">
             {[
               { icon: Users, title: "OFFLINE SPORTS", sub: "Real experiences." },
               { icon: Trophy, title: "TOURNAMENTS", sub: "Regular competitions." },
@@ -143,7 +143,7 @@ export default function Home() {
         <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-4">SPORTS WE PLAY</div>
         <h2 className="font-heading font-black text-4xl sm:text-5xl mb-16">One Community. Many Sports.</h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-autofit lg:grid-cols-6 gap-4 mb-12">
           {[
             { name: "FOOTBALL", img: "https://images.unsplash.com/photo-1511886929837-354d827aae26?auto=format&fit=crop&q=80&w=600" },
             { name: "CRICKET", img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=600" },
@@ -175,7 +175,7 @@ export default function Home() {
           {/* Connecting Line */}
           <div className="absolute top-8 left-[10%] right-[10%] h-[1px] bg-white/10 border-t border-dashed border-white/20 hidden md:block"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center relative z-10">
+          <div className="grid grid-autofit gap-8 text-center relative z-10">
             {[
               { num: 1, title: "JOIN", desc: "Become a member of Khel Clan." },
               { num: 2, title: "PLAY", desc: "Join matches, practice sessions and events." },
@@ -197,7 +197,7 @@ export default function Home() {
       {/* 6. UPCOMING TOURNAMENTS */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-white/10">
         <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-4 text-center">UPCOMING TOURNAMENTS</div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-autofit gap-6 mb-12">
           
           {[
             { sport: "FOOTBALL", title: "Khel Clan Football Cup", date: "25 MAY 2026", venue: "City Sports Arena", img: "https://images.unsplash.com/photo-1518605368461-1ee51a4bbce4?auto=format&fit=crop&q=80&w=600" },
@@ -241,7 +241,7 @@ export default function Home() {
             <Quote className="text-white/10" size={64} />
           </div>
           
-          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="lg:col-span-3 grid grid-autofit gap-6">
             {[
               { name: "Aarav Sharma", desc: "Khel Clan is not just about sports. It's about the people, the vibes and the memories." },
               { name: "Rohan Mehta", desc: "I have improved a lot and met amazing people through Khel Clan tournaments." },

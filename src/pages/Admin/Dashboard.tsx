@@ -13,7 +13,7 @@ export default function Dashboard() {
   return (
     <div className="space-y-8">
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-autofit gap-6">
         {stats.map((stat, idx) => (
           <div key={idx} className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex items-center justify-between">
             <div>

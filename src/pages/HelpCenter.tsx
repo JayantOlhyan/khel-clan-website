@@ -38,7 +38,7 @@ export default function HelpCenter() {
         </div>
 
         {/* Categories */}
-        <div className="grid md:grid-cols-2 gap-4 mb-12">
+        <div className="grid grid-autofit gap-4 mb-12">
           {categories.map((c, i) => (
             <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-black/5 flex justify-between items-center cursor-pointer hover:border-brand-lime transition-colors group">
               <span className="font-bold text-brand-forest group-hover:text-brand-lime transition-colors">{c}</span>

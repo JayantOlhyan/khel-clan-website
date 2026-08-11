@@ -54,7 +54,7 @@ export default function HowItWorks() {
             <h2 className="font-heading font-black text-4xl sm:text-5xl">4 SIMPLE STEPS.</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-autofit gap-8">
             {[
               { num: "01", icon: Search, title: "DISCOVER", desc: "Find games happening near you. Filter by sport, location, and skill level.", img: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=400" },
               { num: "02", icon: CalendarCheck, title: "JOIN", desc: "RSVP to a game or tournament. Secure your spot instantly.", img: "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&q=80&w=400" },

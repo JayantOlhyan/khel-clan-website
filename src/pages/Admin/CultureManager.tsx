@@ -44,7 +44,7 @@ Rules & Guidelines:
         </button>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid grid-autofit gap-8">
         {/* Editor */}
         <div className="lg:col-span-2 space-y-4">
           <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">

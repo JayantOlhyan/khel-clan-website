@@ -317,7 +317,7 @@ export default function CityDetail() {
       <section className="py-12 border-t border-white/10 bg-[#0a1a12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <h2 className="font-heading font-black text-2xl mb-8">Why Play in New Delhi?</h2>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+           <div className="grid grid-autofit gap-6">
              
              <div className="flex items-start gap-4">
                <div className="w-12 h-12 rounded-full border border-brand-lime/30 flex items-center justify-center text-brand-lime flex-shrink-0 bg-brand-lime/5">
