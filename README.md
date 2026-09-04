@@ -1,100 +1,95 @@
-# 🟢 KhelClan Web Platform
+# KhelClan Web Platform
 
-![KhelClan Banner](https://via.placeholder.com/1200x300/1D6A36/F2F7F4?text=Find+a+game.+Show+up.+Play.+Leave+with+your+clip.)
+> A comprehensive frontend prototype for an offline sports community platform, built with React 19, Vite, and Tailwind CSS.
 
-> **Elevating amateur sports to a pro experience. Find open games, book your slot, play, and receive professional-grade highlights automatically synced to your dashboard.**
+## Overview
 
-Welcome to the **KhelClan** web application repository. This platform serves as the central hub for players, coordinators, and administrators within the KhelClan ecosystem.
+KhelClan is a web application designed to serve as a central hub for players, coordinators, and administrators in a sports community ecosystem. Currently, the repository contains a **high-fidelity frontend UI prototype** that maps out the extensive user workflows, directories, and administrative dashboards required for the platform.
 
----
+**Status:** Frontend Prototype / Mock State. The application relies on client-side state management (Zustand) to simulate user interactions and does not currently connect to a live backend database or authentication provider.
 
-## 🚀 Features
+## Why This Project Exists
 
-- **Public Game Browser:** Discover available matched games by sport, turf zone, and time.
-- **Secure Slot Booking:** Direct integration with Razorpay for seamless match payments.
-- **Player Dashboard (Upcoming):** Manage your scheduled games, view your wallet, track referral points, and watch/download your post-game clips.
-- **Coordinator Dashboard (Upcoming):** Turf owners and organizers can manage schedules, upload massive game files via the Clip Pipeline, and track earnings.
-- **The "Clip Pipeline" (Upcoming):** Proprietary workflow for ingesting raw game footage and serving it elegantly back to the player dashboard.
+This repository implements the visual and structural foundation of the KhelClan platform. It exists to solve the problem of organizing local sports by providing a scalable frontend architecture that covers:
+- Public discovery of venues, games, and academies.
+- Player dashboards and community interaction interfaces.
+- Administrative controls for managing the platform.
 
----
+## Features
 
-## 🛠 Technology Stack
+### Implemented
+- **Public Directory System:** Browseable pages for Sports, Locations, Venues, Players, Groups, Games, and Academies.
+- **Mock Authentication Flow:** Visual interfaces for Login, Signup, Password Reset, and Onboarding.
+- **Player Dashboard Shell:** UI for Overview, Clips, Discover, Feed, Messages, Notifications, Activity, and Settings.
+- **Admin Panel Shell:** UI for managing Users, Games, Groups, Reports, Culture, Content, and Sports.
+- **Global Overlays:** Mocked integration for Auth, Payments, and AI Assistant interactions.
+- **Performance Optimizations:** Route-level code splitting using `React.lazy` and `Suspense`, combined with custom skeleton loaders (e.g., `HeroGridSkeleton`, `DirectorySkeleton`).
 
-This project is built prioritizing performance, modularity, and premium aesthetics.
+### Not Yet Implemented (Planned)
+- Real user authentication (Firebase/NextAuth).
+- Persistent database storage.
+- Real payment processing (Razorpay integration is planned but not currently implemented).
+- The "Clip Pipeline" (Video ingestion and processing).
+- Functional API integrations.
 
-### Core Frameworks
-- **React 18** (UI Library)
-- **Vite** (Next Generation Frontend Tooling)
-- **TypeScript** (Static Typing and Integrity)
+## Architecture
 
-### Styling & UI
-- **Tailwind CSS v3** (Utility-first styling, integrated with exact WRD design tokens)
-- **Framer Motion** (Micro-animations and fluid layout transitions)
-- **clsx / tailwind-merge** (Dynamic classy manipulation)
-- **Lucide React** (Vector icons)
-
-### State Management & Data Fetching
-- **Zustand** (Predictable, lightweight global state)
-- **TanStack React Query** (Server state, caching, synchronization)
-
-### Backend & Infrastructure (In Development)
-- **Firebase:** Phone Auth, Firestore Database, Cloud Storage.
-- **Razorpay:** Payments Web SDK & Webhooks.
-
----
-
-## 📂 Architecture
-
-We use a feature-driven structural pattern to keep our React codebase strictly organized as it scales.
+The current architecture is strictly a Single Page Application (SPA) utilizing client-side routing and state.
 
 ```text
-/src
- ├── assets/        # Media assets (SVGs, core graphics)
- ├── components/    # Globally shared UI primitives (Navbar, Footer, Buttons)
- ├── features/      # Domain specific logic (auth, games, clips, payments)
- ├── hooks/         # Custom global React hooks
- ├── layouts/       # Structural wrappers (PublicLayout, DashboardLayout)
- ├── pages/         # Top-level Route components
- ├── store/         # Zustand global state slices
- ├── styles/        # Global index.css containing base font variables
- ├── lib/           # 3rd-party configuration (firebase.js, razorpay.js)
- └── App.tsx        # React Router configuration matrix
+User
+ ↓
+Vite/React SPA (Frontend)
+ ↓
+React Router (Page Navigation & Suspense Boundaries)
+ ↓
+Zustand (Global Mock State: useAppStore, useGameStore, etc.)
 ```
 
----
+## Tech Stack
 
-## 🎨 Design System
+### Frontend
+- **Framework:** React 19
+- **Build Tool:** Vite 8
+- **Language:** TypeScript
+- **Routing:** React Router v7
+- **Styling:** Tailwind CSS v3, PostCSS, `clsx`, `tailwind-merge`
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Visuals:** Recharts (Data Visualization), Swiper (Carousels)
 
-KhelClan utilizes a strict, proprietary color palette and typography system injected directly into the `tailwind.config.js`.
+### State Management & Data
+- **Global State:** Zustand
+- **Async State:** TanStack React Query v5 (Configured, awaiting API endpoints)
 
-- **Colors:**
-  - `primary-green`: `#1D6A36`
-  - `energy-gold`: `#D4860A`
-  - `deep-black`: `#1A1A1A`
-  - `muted-green`: `#F2F7F4`
+## Repository Structure
 
-- **Typography:**
-  - `font-heading`: **Plus Jakarta Sans** (Strong, modern, bold headings)
-  - `font-body`: **Inter** (Excellent readability for standard copy)
-  - `font-mono`: **JetBrains Mono** (Technical readouts and numbers)
+```text
+src/
+├── assets/        # Static assets and SVGs
+├── components/    # Reusable UI primitives (Modals, Skeletons, Guards)
+├── data/          # Static JSON/TS data mocking backend responses
+├── features/      # Domain-specific components
+├── hooks/         # Custom React hooks
+├── layouts/       # Structural wrappers (PublicLayout, DashboardLayout, AdminLayout)
+├── pages/         # Route entry points (Auth, Dashboard, Admin, Games, etc.)
+├── store/         # Zustand store definitions (useAppStore, usePlayerStore, etc.)
+├── styles/        # Global CSS (Tailwind directives)
+└── App.tsx        # Main application router and Suspense boundaries
+```
 
----
+## Prerequisites
 
-## 💻 Local Development
+To run this project locally, you will need:
+- Node.js (v18 or higher recommended)
+- npm (v9 or higher)
 
-Follow these steps to run the application locally on your machine.
-
-### Prerequisites
-- Node.js (v18+)
-- npm (v9+)
-- Git
-
-### Installation
+## Installation & Local Development
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/JayantOlhyan/khel-clan-website.git
-   cd "khel-clan-website"
+   git clone <repository-url>
+   cd "KhelClan website"
    ```
 
 2. **Install dependencies**
@@ -102,36 +97,72 @@ Follow these steps to run the application locally on your machine.
    npm install
    ```
 
-3. **Configure Environment Variables**
-   Create a `.env.local` file in the root directory and add your API keys (Keys provided by administration):
-   ```env
-   VITE_FIREBASE_API_KEY="your-api-key"
-   VITE_RAZORPAY_KEY_ID="your-razorpay-key"
-   ```
-
-4. **Start the Development Server**
+3. **Start the development server**
    ```bash
    npm run dev
    ```
+   The application will be available at `http://localhost:5173`.
 
-5. Open your browser and navigate to `http://localhost:5173`.
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-### Building for Production
-To build the application for deployment into the `dist` directory:
-```bash
-npm run build
-```
+5. **Linting**
+   ```bash
+   npm run lint
+   ```
 
----
+## Environment Variables
 
-## 📋 Implementation Roadmap
+Currently, the application is entirely client-side and driven by static data and mock states. No environment variables are strictly required to run the development server. 
 
-- [x] **Phase 1:** Foundational Architecture, Vite scaffolding, and Tailwind Design System setup.
-- [x] **Phase 2:** Global Routing and Public Discovery Pages (UI/UX completeness).
-- [ ] **Phase 3:** Booking engine logic and Razorpay SDK integration.
-- [ ] **Phase 4:** Firebase Auth implementation and core Dashboards scaffolding.
-- [ ] **Phase 5:** The Clip Pipeline (Upload dropzones, player delivery, video.js components).
+*(Note: Prior documentation referenced `VITE_FIREBASE_API_KEY` and `VITE_RAZORPAY_KEY_ID`, but these integrations are not present in the current codebase).*
 
----
+## Database & API
 
-> Proudly developed for **KhelClan** by the Devcation Dominators team.
+**Not yet implemented.** 
+All data currently originates from static files within `src/data/` (e.g., `blogPosts.ts`, `cultureData.json`, `faqs.ts`) or is managed ephemerally via Zustand stores located in `src/store/` (e.g., `useAppStore.ts`). 
+
+## Authentication & Authorization
+
+**Mocked Implementation.**
+- Authentication is simulated entirely via `useAppStore` in Zustand.
+- Logging in sets a hardcoded mock `user` object in memory and toggles `isAuthenticated: true`.
+- The `AdminGuard` component currently relies on an `isAdmin` flag in the local state, which defaults to `true` for prototype testing. 
+- **Security Warning:** There is no actual security, session validation, or protected routing backed by a server. 
+
+## Known Limitations
+
+- **No Persistence:** Refreshing the page resets all state (logins, payments, game creation) as data is held in memory.
+- **Mocked Payments:** The payment modal (`PaymentModal.tsx`) triggers a mock timeout function `processPayment()` rather than communicating with a real payment gateway.
+- **Empty API Layer:** While `@tanstack/react-query` is installed, there is no `src/lib/api` or configured backend to fetch from.
+
+## Development Workflow
+
+Contributors should follow standard React development practices:
+- Define global state in `src/store/`.
+- Ensure new routes in `App.tsx` are wrapped in `React.lazy()` with artificial delays disabled or tuned appropriately (currently set to 800ms for skeleton demonstration).
+- Use Tailwind classes for all styling, respecting the custom theme variables configured in `tailwind.config.js` (e.g., `brand-lime`, `brand-forest`).
+
+## Architectural Trade-offs
+
+### Decision: Zustand over Redux/Context for Prototype State
+**Reason:** Zustand provides a boilerplate-free way to spin up complex mock stores (e.g., `useGameStore`, `usePlayerStore`) required to demonstrate UI interactions to stakeholders without building a real backend.
+**Trade-off:** Fast UI iteration at the cost of needing to entirely rip out and replace these stores with TanStack Query mutations/fetches once a real API is introduced.
+
+### Decision: `lazyWithDelay` in Routing
+**Reason:** Custom `lazyWithDelay` wrapper around `React.lazy()` injects an artificial 800ms delay on route loads.
+**Trade-off:** Showcases the polished skeleton loader components to stakeholders, but will need to be removed in production to ensure optimal LCP (Largest Contentful Paint) and user experience.
+
+## AI / Developer Orientation
+
+If you are an AI agent or a new developer modifying this codebase:
+- **Routing:** All routes are registered in `src/App.tsx`.
+- **State:** To change how the user acts, inspect `src/store/useAppStore.ts`.
+- **Data Mocking:** To add fake entities (games, players), check `src/data/` or the default states in `src/store/`.
+- **Styling:** The brand colors (`brand-lime`, `brand-forest`) are defined strictly in `tailwind.config.js`. Avoid using raw hex codes in components.
+
+## License
+
+*(No license file found in repository. Assume proprietary until otherwise specified).*
