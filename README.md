@@ -6,7 +6,24 @@
 
 KhelClan is a web application designed to serve as a central hub for players, coordinators, and administrators in a sports community ecosystem. Currently, the repository contains a **high-fidelity frontend UI prototype** that maps out the extensive user workflows, directories, and administrative dashboards required for the platform.
 
-**Status:** Frontend Prototype / Mock State. The application relies on client-side state management (Zustand) to simulate user interactions and does not currently connect to a live backend database or authentication provider.
+**Status:** Transitioning from Prototype to Production Foundation. The platform scope is focused on Marketing, Public Game Share Pages (`/g/:gameId`), Legal & Compliance Hub, and an Admin Operations Panel (with player features centered in the mobile app). Recent milestones include Phase W0 (Security Lockdown & Baseline Audit) and W1 foundational changes (Firebase Admin Claim Guard, Route Delay removal).
+
+## Implementation & Milestone Roadmap
+
+- [x] **Phase W0: Baseline Audit & Security Lockdown**
+  - [x] Secured `.gitignore` and authored `.env.example`.
+  - [x] Cleaned fabricated marketing metrics, preview labels, and sanitized prototype testimonials.
+  - [x] Re-authored `public/sitemap.xml` strictly to keep indexable public routes.
+  - [x] Generated comprehensive technical and security audit report (`docs/AUDIT.md`).
+- [x] **Phase W1 / W3 Milestones**
+  - [x] **Firebase Admin Claim Guard:** Replaced client-side boolean check in `AdminGuard.tsx` with live Firebase Auth token inspection requiring custom claim `admin: true` (via `src/lib/firebase.ts`).
+  - [x] **Route Performance Optimization:** Removed artificial 800ms `lazyWithDelay` on route loading across `src/App.tsx`.
+  - [x] **Shareable Game Route:** Added `/g/:gameId` public route alias for shareable matches.
+- [ ] **Upcoming Phases**
+  - [ ] Dedicated Admin Sign-in UI & session handling.
+  - [ ] Image optimization (responsive WebP/AVIF, CDN integration).
+  - [ ] Netlify security headers (CSP, HSTS, frame protection in `netlify.toml`).
+  - [ ] Native App Universal Linking configuration (`assetlinks.json`, `apple-app-site-association`).
 
 ## Why This Project Exists
 
@@ -115,9 +132,19 @@ To run this project locally, you will need:
 
 ## Environment Variables
 
-Currently, the application is entirely client-side and driven by static data and mock states. No environment variables are strictly required to run the development server. 
+Copy `.env.example` to `.env.local` to configure client-side environment settings:
 
-*(Note: Prior documentation referenced `VITE_FIREBASE_API_KEY` and `VITE_RAZORPAY_KEY_ID`, but these integrations are not present in the current codebase).*
+```bash
+cp .env.example .env.local
+```
+
+Required keys for live Firebase authentication:
+- `VITE_FIREBASE_API_KEY`
+- `VITE_FIREBASE_AUTH_DOMAIN`
+- `VITE_FIREBASE_PROJECT_ID`
+- `VITE_FIREBASE_STORAGE_BUCKET`
+- `VITE_FIREBASE_MESSAGING_SENDER_ID`
+- `VITE_FIREBASE_APP_ID`
 
 ## Database & API
 
@@ -126,11 +153,8 @@ All data currently originates from static files within `src/data/` (e.g., `blogP
 
 ## Authentication & Authorization
 
-**Mocked Implementation.**
-- Authentication is simulated entirely via `useAppStore` in Zustand.
-- Logging in sets a hardcoded mock `user` object in memory and toggles `isAuthenticated: true`.
-- The `AdminGuard` component currently relies on an `isAdmin` flag in the local state, which defaults to `true` for prototype testing. 
-- **Security Warning:** There is no actual security, session validation, or protected routing backed by a server. 
+- **Admin Portal Access:** Protected by `AdminGuard.tsx` which verifies live Firebase ID tokens via `src/lib/firebase.ts`. It strictly requires a verified custom claim `admin: true` (assigned server-side via the Firebase Admin SDK). Anonymous or non-admin requests render a full 403 Forbidden state.
+- **Player Auth (Legacy Mock):** General player state in `useAppStore` still simulates basic mock sessions; full player authentication will reside in the mobile app.
 
 ## Known Limitations
 
