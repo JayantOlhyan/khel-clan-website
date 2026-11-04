@@ -101,7 +101,7 @@ export default function AIAssistant() {
               </div>
               <div>
                 <h4 className="font-bold">Clan assistant</h4>
-                <p className="text-xs text-brand-lime/70 uppercase tracking-widest font-bold">RAG Enabled AI</p>
+                <p className="text-xs text-brand-lime/70 uppercase tracking-widest font-bold">Prototype Assistant (Rule-Based)</p>
               </div>
             </div>
             <button onClick={() => setIsOpen(false)} className="hover:rotate-90 transition transform min-h-[48px] min-w-[48px] flex items-center justify-center">

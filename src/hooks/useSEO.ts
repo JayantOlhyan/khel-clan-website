@@ -74,7 +74,7 @@ export function useSEO({
     }
 
     // 6. Structured Data (JSON-LD)
-    let scriptId = 'khelclan-structured-data';
+    const scriptId = 'khelclan-structured-data';
     let scriptElement = document.getElementById(scriptId) as HTMLScriptElement;
     
     if (structuredData) {

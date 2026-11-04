@@ -1,13 +1,23 @@
 import React from 'react';
-import { Navigate, useLocation } from 'react-router-dom';
 import { useAppStore } from '../store/useAppStore';
+import { ShieldAlert } from 'lucide-react';
+import SystemState from './SystemState';
 
 export default function AdminGuard({ children }: { children: React.ReactNode }) {
   const { isAdmin } = useAppStore();
-  const location = useLocation();
 
   if (!isAdmin) {
-    return <Navigate to="/500" replace state={{ error: "403 - Permission Denied" }} />;
+    return (
+      <SystemState
+        icon={ShieldAlert}
+        title="403 - Admin Access Restricted"
+        description="You do not have administrative permissions to view this portal. Access is restricted to authorized personnel."
+        actionText="Return to Homepage"
+        actionLink="/"
+        isFullPage={true}
+        iconColor="text-brand-flame"
+      />
+    );
   }
 
   return <>{children}</>;

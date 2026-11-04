@@ -62,7 +62,7 @@ interface AppState {
 
 export const useAppStore = create<AppState>((set) => ({
   isAuthenticated: false,
-  isAdmin: true, // Default to true for prototype testing
+  isAdmin: false, // Deny by default; real Firebase claim check in W1
   hasCompletedOnboarding: false,
   user: null,
   authModalOpen: false,

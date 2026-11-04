@@ -107,7 +107,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="font-heading font-bold text-white mb-1">Active Community</h4>
-                  <p className="text-sm text-gray-400">Thousands of players ready to play.</p>
+                  <p className="text-sm text-gray-400">Connecting local sports enthusiasts for offline games.</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
@@ -196,13 +196,13 @@ export default function Home() {
 
       {/* 6. UPCOMING TOURNAMENTS */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-white/10">
-        <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-4 text-center">UPCOMING TOURNAMENTS</div>
+        <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-4 text-center">UPCOMING TOURNAMENTS (PREVIEW)</div>
         <div className="grid grid-autofit gap-6 mb-12">
           
           {[
-            { sport: "FOOTBALL", title: "Khel Clan Football Cup", date: "25 MAY 2026", venue: "City Sports Arena", img: "https://images.unsplash.com/photo-1518605368461-1ee51a4bbce4?auto=format&fit=crop&q=80&w=600" },
-            { sport: "CRICKET", title: "Summer Cricket Championship", date: "06 JUN 2026", venue: "Green Field Ground", img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=600" },
-            { sport: "BASKETBALL", title: "Khel Clan Basketball League", date: "22 JUN 2026", venue: "Indoor Stadium", img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=600" }
+            { sport: "FOOTBALL", title: "Khel Clan Football Cup", date: "Coming Soon", venue: "City Sports Arena", img: "https://images.unsplash.com/photo-1518605368461-1ee51a4bbce4?auto=format&fit=crop&q=80&w=600" },
+            { sport: "CRICKET", title: "Summer Cricket Championship", date: "Coming Soon", venue: "Green Field Ground", img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&q=80&w=600" },
+            { sport: "BASKETBALL", title: "Khel Clan Basketball League", date: "Coming Soon", venue: "Indoor Stadium", img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=600" }
           ].map((t, i) => (
             <div key={i} className="group relative rounded-2xl overflow-hidden bg-[#0a1a12] aspect-square flex flex-col justify-end p-6 border border-white/10 hover:border-brand-lime/50 transition-colors">
               <div className="absolute inset-0">
@@ -210,7 +210,10 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#05110a] via-[#05110a]/80 to-transparent"></div>
               </div>
               <div className="relative z-10">
-                <span className="bg-brand-lime text-[#05110a] px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider mb-4 inline-block">{t.sport}</span>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="bg-brand-lime text-[#05110a] px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider inline-block">{t.sport}</span>
+                  <span className="bg-white/10 text-white/70 px-2 py-0.5 rounded text-[10px] font-mono uppercase tracking-wider">Preview</span>
+                </div>
                 <h3 className="font-heading font-bold text-xl mb-4 line-clamp-2">{t.title}</h3>
                 <div className="space-y-2 text-sm text-gray-300">
                   <div className="flex items-center gap-2"><MapPin size={14} className="text-brand-lime" /> {t.date}</div>
@@ -236,16 +239,17 @@ export default function Home() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
-            <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-4">OUR COMMUNITY</div>
+            <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-2">OUR COMMUNITY</div>
+            <span className="inline-block text-[10px] uppercase font-mono tracking-wider bg-white/10 text-brand-lime px-2 py-0.5 rounded mb-4">Sample Quotes</span>
             <h2 className="font-heading font-black text-4xl mb-6 leading-tight">Real People.<br/>Real Stories.</h2>
             <Quote className="text-white/10" size={64} />
           </div>
           
           <div className="lg:col-span-3 grid grid-autofit gap-6">
             {[
-              { name: "Aarav Sharma", desc: "Khel Clan is not just about sports. It's about the people, the vibes and the memories." },
-              { name: "Rohan Mehta", desc: "I have improved a lot and met amazing people through Khel Clan tournaments." },
-              { name: "Vivek Singh", desc: "Best sports community in our city. Well organized and full of energy!" }
+              { name: "Aarav S.", role: "Footballer", desc: "Khel Clan is not just about sports. It's about the people, the vibes and the memories." },
+              { name: "Rohan M.", role: "Badminton Player", desc: "I have improved a lot and met amazing people through Khel Clan games." },
+              { name: "Vivek S.", role: "Basketball Enthusiast", desc: "Best sports community in our city. Well organized and full of energy!" }
             ].map((review, i) => (
               <div key={i} className="bg-[#0a1a12] border border-white/10 p-8 rounded-2xl flex flex-col justify-between">
                 <p className="text-gray-300 font-body leading-relaxed mb-8">"{review.desc}"</p>
@@ -254,7 +258,8 @@ export default function Home() {
                     {review.name.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-sm text-white">- {review.name}</h4>
+                    <h4 className="font-heading font-bold text-sm text-white">- {review.name} <span className="text-xs text-gray-400 font-normal">({review.role})</span></h4>
+                    <span className="text-[10px] text-gray-500 font-mono">Sample Player Quote</span>
                   </div>
                 </div>
               </div>

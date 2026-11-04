@@ -1,22 +1,28 @@
-// src/data/testimonials.ts
+// src/data/testimonials.ts - Sample/Mock feedback for UI prototyping
 export const testimonials = [
   {
     id: 1,
-    name: "Aarav Singh",
-    avatar: "/Users/jayantolhyan/.gemini/antigravity/brain/b12dc062-e79a-45c7-a6de-d2c293931980/avatar1_1776482145258.png",
-    quote: "KhelClan made it so easy to find matches and get my highlights instantly!",
+    name: "Aarav S.",
+    role: "Football Player",
+    avatar: "/logo.png",
+    quote: "Sample feedback: KhelClan makes finding local weekend games effortless.",
+    isSample: true,
   },
   {
     id: 2,
-    name: "Meera Patel",
-    avatar: "/Users/jayantolhyan/.gemini/antigravity/brain/b12dc062-e79a-45c7-a6de-d2c293931980/avatar2_1776482163798.png",
-    quote: "The booking flow is seamless and the UI feels premium.",
+    name: "Meera P.",
+    role: "Badminton Enthusiast",
+    avatar: "/logo.png",
+    quote: "Sample feedback: The sports venue discovery experience is intuitive and fast.",
+    isSample: true,
   },
   {
     id: 3,
-    name: "Rohit Kumar",
-    avatar: "/Users/jayantolhyan/.gemini/antigravity/brain/b12dc062-e79a-45c7-a6de-d2c293931980/avatar3_1776482203586.png",
-    quote: "Love the clip delivery – I can share my best moments on socials instantly.",
+    name: "Rohit K.",
+    role: "Cricket Captain",
+    avatar: "/logo.png",
+    quote: "Sample feedback: Organizing games with fellow sports lovers has never been easier.",
+    isSample: true,
   },
 ];
 

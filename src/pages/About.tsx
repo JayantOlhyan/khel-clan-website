@@ -122,14 +122,20 @@ export default function About() {
       </section>
 
       {/* 4. STATS ROW */}
+      {/* 4. STATS ROW */}
       <section className="py-12 border-b border-white/10 bg-[#0a1a12]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <span className="text-[10px] uppercase font-mono tracking-widest text-brand-lime/80 bg-white/5 px-3 py-1 rounded">
+              Pilot Roadmap Targets
+            </span>
+          </div>
           <div className="grid grid-autofit gap-8 text-center divide-x divide-white/10">
              {[
-               { val: "500+", label: "Active Members" },
-               { val: "25+", label: "Teams & Groups" },
-               { val: "20+", label: "Weekly Games" },
-               { val: "10+", label: "Sports We Play" }
+               { val: "500+", label: "Target Members" },
+               { val: "25+", label: "Target Groups" },
+               { val: "20+", label: "Target Weekly Games" },
+               { val: "10+", label: "Sports Formats" }
              ].map((stat, i) => (
                <div key={i}>
                  <div className="font-heading font-black text-4xl text-brand-lime mb-2">{stat.val}</div>
@@ -144,7 +150,8 @@ export default function About() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-4">THE PEOPLE BEHIND KHEL CLAN</div>
+            <div className="uppercase tracking-widest text-brand-lime font-bold text-xs mb-2">THE PEOPLE BEHIND KHEL CLAN</div>
+            <span className="inline-block text-[10px] uppercase font-mono tracking-wider bg-white/10 text-white/60 px-2 py-0.5 rounded mb-4">Sample Profiles (Placeholder)</span>
             <h2 className="font-heading font-black text-4xl">BUILT BY PLAYERS, FOR PLAYERS.</h2>
           </div>
           <button className="hidden md:inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-lg font-heading font-bold text-xs uppercase tracking-widest hover:bg-white hover:text-[#05110a] transition-colors">
@@ -164,7 +171,8 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#05110a] via-[#05110a]/50 to-transparent"></div>
               <div className="absolute inset-x-0 bottom-0 p-6">
                 <h4 className="font-heading font-bold text-xl text-white mb-1">{member.name}</h4>
-                <p className="text-brand-lime text-xs font-bold uppercase tracking-wider mb-4">{member.role}</p>
+                <p className="text-brand-lime text-xs font-bold uppercase tracking-wider mb-1">{member.role}</p>
+                <span className="text-[10px] text-gray-400 font-mono block mb-3">Sample Profile</span>
                 <div className="flex gap-3">
                   <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center hover:bg-brand-lime hover:text-[#05110a] transition-colors cursor-pointer"><ArrowUpRight size={14} /></div>
                 </div>
