@@ -2,15 +2,7 @@ import React, { Suspense } from 'react';
 import RouteLoader from './components/Skeletons/RouteLoader';
 import { HeroGridSkeleton, DirectorySkeleton, DetailSkeleton } from './components/Skeletons/PageSkeletons';
 
-// A helper to artificially delay chunk loading by 800ms to demonstrate the skeletons!
-const lazyWithDelay = (importFunc: () => Promise<any>, delay = 800) => {
-  return React.lazy(() => 
-    Promise.all([
-      importFunc(),
-      new Promise(resolve => setTimeout(resolve, delay))
-    ]).then(([moduleExports]) => moduleExports)
-  );
-};
+const lazyWithDelay = (importFunc: () => Promise<any>) => React.lazy(importFunc);
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PublicLayout from './layouts/PublicLayout';
 import DashboardLayout from './layouts/DashboardLayout';
@@ -153,7 +145,7 @@ function App() {
           <Route path="/groups/:groupSlug" element={<Suspense fallback={<RouteLoader><DetailSkeleton /></RouteLoader>}><GroupDetails /></Suspense>} />
           <Route path="/games" element={<Suspense fallback={<RouteLoader><DirectorySkeleton /></RouteLoader>}><GamesList /></Suspense>} />
           <Route path="/games/create" element={<Suspense fallback={<RouteLoader><HeroGridSkeleton /></RouteLoader>}><CreateGame /></Suspense>} />
-          <Route path="/games/:gameId" element={<Suspense fallback={<RouteLoader><DetailSkeleton /></RouteLoader>}><GameDetails /></Suspense>} />
+          <Route path="/games/:gameId" element={<Suspense fallback={<RouteLoader><DetailSkeleton /></RouteLoader>}><GameDetails /></Suspense>} />          <Route path="/g/:gameId" element={<Suspense fallback={<RouteLoader><DetailSkeleton /></RouteLoader>}><GameDetails /></Suspense>} />
           <Route path="/games/:gameId/edit" element={<Suspense fallback={<RouteLoader><HeroGridSkeleton /></RouteLoader>}><EditGame /></Suspense>} />
           <Route path="/games/:gameId/manage" element={<Suspense fallback={<RouteLoader><HeroGridSkeleton /></RouteLoader>}><ManageGame /></Suspense>} />
           <Route path="/venues" element={<Suspense fallback={<RouteLoader><DirectorySkeleton /></RouteLoader>}><Venues /></Suspense>} />

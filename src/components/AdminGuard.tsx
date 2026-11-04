@@ -1,10 +1,18 @@
-import React from 'react';
-import { useAppStore } from '../store/useAppStore';
+import React, { useEffect, useState } from 'react';
+import { onIdTokenChanged } from 'firebase/auth';
 import { ShieldAlert } from 'lucide-react';
 import SystemState from './SystemState';
+import { auth } from '../lib/firebase';
 
+// Admin access requires a Firebase custom claim `admin: true` (set server-side).
 export default function AdminGuard({ children }: { children: React.ReactNode }) {
-  const { isAdmin } = useAppStore();
+  const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
+
+  useEffect(() => onIdTokenChanged(auth, async (u) => {
+    setIsAdmin(u ? (await u.getIdTokenResult()).claims.admin === true : false);
+  }), []);
+
+  if (isAdmin === null) return null;
 
   if (!isAdmin) {
     return (
